@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121714">
+  <meta name="description" content="Fichário virtual de 4 bolsos para organizar uma coleção temática de fósseis Pokémon.">
+  <title>Museu Fóssil — Fichário Pokémon</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121714'/%3E%3Cpath d='M13 39c9-18 27-23 39-12-12-2-17 4-18 11-1 8-9 12-17 8 8-1 12-6 11-12-5 1-9 3-15 5Z' fill='%23d4a64d'/%3E%3Ccircle cx='43' cy='23' r='3' fill='%23f5e7bc'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://assets.tcgdex.net">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◒</span>
+      <div><strong>Museu Fóssil</strong><small>Fichário Pokémon · 4 bolsos</small></div>
+    </div>
+    <nav class="view-tabs" aria-label="Seções">
+      <button class="tab is-active" data-view="binder">Fichário</button>
+      <button class="tab" data-view="catalog">Todas as cartas <span id="catalogCount">0</span></button>
+    </nav>
+    <div class="header-actions" id="pageActions">
+      <button class="icon-button" id="prevPage" aria-label="Página anterior">←</button>
+      <span class="page-indicator">Página <strong id="pageNumber">1</strong> / <span id="pageTotal">1</span></span>
+      <button class="icon-button" id="nextPage" aria-label="Próxima página">→</button>
+    </div>
+    <div class="data-actions" id="dataActions">
+      <button class="utility-button" id="exportData" title="Baixar uma cópia do fichário">↓ <span>Exportar</span></button>
+      <button class="utility-button" id="importData" title="Abrir uma cópia do fichário">↑ <span>Importar</span></button>
+      <input id="importFile" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="catalog-panel" aria-label="Catálogo de cartas">
+      <div class="panel-heading">
+        <div><span class="eyebrow">Acervo</span><h1>Cartas disponíveis</h1></div>
+        <span class="result-count" id="resultCount">0</span>
+      </div>
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Buscar Pokémon, coleção ou número…" autocomplete="off">
+      </label>
+      <div class="filter-row" aria-label="Filtros do catálogo">
+        <button class="filter is-active" data-filter="all">Todas</button>
+        <button class="filter" data-filter="pokemon">Pokémon</button>
+        <button class="filter" data-filter="theme">Temáticas</button>
+        <button class="filter" data-filter="owned">No fichário</button>
+      </div>
+      <div class="select-row">
+        <label><span>Família</span><select id="familyFilter"><option value="all">Todas as famílias</option></select></label>
+        <label><span>Ordenar</span><select id="sortCards"><option value="family">Família</option><option value="name">Nome</option><option value="set">Coleção</option><option value="price">Preço Liga</option></select></label>
+      </div>
+      <div id="cardList" class="card-list" aria-live="polite"></div>
+      <p class="source-note">Imagens e catálogo: <a href="https://tcgdex.dev/" target="_blank" rel="noreferrer">TCGdex</a>. Consulte o valor brasileiro na ficha da carta.</p>
+    </aside>
+
+    <section class="binder-stage" aria-labelledby="binderTitle">
+      <div class="binder-title-row">
+        <div><span class="eyebrow">Exposição atual</span><h2 id="binderTitle">Origens do fóssil</h2></div>
+        <div class="page-stats"><span><b id="filledSlots">0</b>/4 bolsos</span><span>Arraste uma carta para montar</span></div>
+      </div>
+      <div class="collection-stats" aria-label="Resumo da coleção">
+        <span><small>Cartas no fichário</small><strong id="ownedCount">0</strong></span>
+        <span><small>Total pago</small><strong id="paidTotal">R$ 0,00</strong></span>
+        <span><small>Referência Liga</small><strong id="ligaTotal">R$ 0,00</strong></span>
+        <span><small>Vindas de booster</small><strong id="boosterCount">0</strong></span>
+      </div>
+      <div class="binder-shell">
+        <div class="binder-spine" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div id="binderPage" class="binder-page" aria-label="Página com quatro bolsos"></div>
+      </div>
+      <div class="binder-footer">
+        <p class="binder-hint">Solte cartas nos bolsos. Clique em uma carta colocada para registrar aquisição e valor pago.</p>
+        <button class="text-button" id="renamePage">Renomear página</button>
+        <button class="text-button danger" id="clearPage">Esvaziar página</button>
+      </div>
+    </section>
+  </main>
+
+  <template id="catalogCardTemplate">
+    <article class="catalog-card" draggable="true" tabindex="0">
+      <div class="thumb-wrap"><img alt="" loading="lazy"><span class="owned-badge" hidden>no fichário</span></div>
+      <div class="card-copy"><h3></h3><p></p><div><span class="kind"></span><span class="price">Liga: não cotado</span></div></div>
+      <button class="add-card" aria-label="Adicionar ao primeiro bolso vazio">＋</button>
+    </article>
+  </template>
+
+  <dialog id="cardDialog" class="card-dialog">
+    <form method="dialog" id="cardForm">
+      <button class="dialog-close" value="cancel" aria-label="Fechar">×</button>
+      <div class="dialog-layout">
+        <div class="dialog-art"><img id="dialogImage" alt=""></div>
+        <div class="dialog-content">
+          <span class="eyebrow" id="dialogKind"></span>
+          <h2 id="dialogName"></h2>
+          <p class="dialog-meta" id="dialogMeta"></p>
+          <div class="dialog-links">
+            <a id="ligaLink" target="_blank" rel="noreferrer">Consultar na LigaPokemon ↗</a>
+            <a id="sourceLink" target="_blank" rel="noreferrer">Dados da carta ↗</a>
+          </div>
+          <div class="form-grid">
+            <label><span>Como consegui</span><select id="acquisitionMethod"><option value="purchase">Comprei avulsa</option><option value="booster">Veio em booster</option><option value="trade">Troca</option><option value="gift">Presente</option><option value="unknown">Ainda não registrei</option></select></label>
+            <label><span>Valor que paguei</span><div class="money-input"><b>R$</b><input id="paidPrice" inputmode="decimal" placeholder="0,00"></div></label>
+            <label><span>Preço de referência Liga</span><div class="money-input"><b>R$</b><input id="ligaPrice" inputmode="decimal" placeholder="Consultar no link acima"></div></label>
+            <label class="wide"><span>Observação</span><textarea id="cardNote" rows="3" placeholder="Condição, idioma, loja, data, detalhes do booster…"></textarea></label>
+          </div>
+          <p class="price-help">A LigaPokemon não oferece uma API pública aberta. O campo de referência fica sob seu controle e é salvo com o fichário.</p>
+          <div class="dialog-actions">
+            <button class="secondary-button" type="button" id="removeCard">Retirar do bolso</button>
+            <button class="primary-button" value="save">Salvar ficha</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="cards-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
