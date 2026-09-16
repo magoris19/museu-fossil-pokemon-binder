@@ -65,7 +65,7 @@
       <div class="collection-stats" aria-label="Resumo da coleção">
         <span><small>Cartas no fichário</small><strong id="ownedCount">0</strong></span>
         <span><small>Total pago</small><strong id="paidTotal">R$ 0,00</strong></span>
-        <span><small>Referência Liga</small><strong id="ligaTotal">R$ 0,00</strong></span>
+          <span><small>Valor mínimo Liga</small><strong id="ligaTotal">R$ 0,00</strong></span>
         <span><small>Vindas de booster</small><strong id="boosterCount">0</strong></span>
       </div>
       <div class="binder-shell">
@@ -105,10 +105,10 @@
           <div class="form-grid">
             <label><span>Como consegui</span><select id="acquisitionMethod"><option value="purchase">Comprei avulsa</option><option value="booster">Veio em booster</option><option value="trade">Troca</option><option value="gift">Presente</option><option value="unknown">Ainda não registrei</option></select></label>
             <label><span>Valor que paguei</span><div class="money-input"><b>R$</b><input id="paidPrice" inputmode="decimal" placeholder="0,00"></div></label>
-            <label><span>Preço de referência Liga</span><div class="money-input"><b>R$</b><input id="ligaPrice" inputmode="decimal" placeholder="Consultar no link acima"></div></label>
+            <label><span>Valor mínimo Liga</span><div class="money-input"><b>R$</b><input id="ligaPrice" inputmode="decimal" placeholder="Sem referência" readonly></div></label>
             <label class="wide"><span>Observação</span><textarea id="cardNote" rows="3" placeholder="Condição, idioma, loja, data, detalhes do booster…"></textarea></label>
           </div>
-          <p class="price-help">A LigaPokemon não oferece uma API pública aberta. O campo de referência fica sob seu controle e é salvo com o fichário.</p>
+          <p class="price-help">“Valor que paguei” é seu gasto real. “Valor mínimo Liga” é uma referência automática do menor preço observado no snapshot CyndaQ/Liga publicado com o fichário.</p>
           <div class="dialog-actions">
             <button class="secondary-button" type="button" id="removeCard">Retirar do bolso</button>
             <button class="primary-button" value="save">Salvar ficha</button>

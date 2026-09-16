@@ -84,7 +84,7 @@ const normalizeStoredPrice = value => {
 };
 const ligaPriceReferenceFor = card => card ? ligaPriceReferences[card.id] || null : null;
 const ligaPriceFor = card => card
-  ? normalizeStoredPrice(recordFor(card.id).ligaPrice) ?? normalizeStoredPrice(card.ligaPrice) ?? normalizeStoredPrice(ligaPriceReferenceFor(card)?.min_price)
+  ? normalizeStoredPrice(ligaPriceReferenceFor(card)?.min_price) ?? normalizeStoredPrice(card.ligaPrice)
   : null;
 const formatObservedDate = value => value
   ? new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(value))
@@ -185,8 +185,8 @@ function renderCatalog() {
   if (ui.sort === 'price') {
     el.sortStatus.classList.toggle('is-empty', pricedCount === 0);
     el.sortStatus.textContent = pricedCount
-      ? `${pricedCount} ${pricedCount === 1 ? 'carta possui' : 'cartas possuem'} preço Liga informado. As demais ficam no fim.`
-      : 'Nenhuma carta possui preço Liga informado. Clique em uma carta e preencha “Preço de referência Liga”.';
+      ? `${pricedCount} ${pricedCount === 1 ? 'carta possui' : 'cartas possuem'} valor mínimo Liga importado. As demais ficam no fim.`
+      : 'Nenhuma carta possui valor mínimo Liga importado no snapshot atual.';
   }
   el.cardList.replaceChildren();
   el.resultCount.textContent = visible.length;
@@ -211,7 +211,7 @@ function renderCatalog() {
     node.querySelector('h3').textContent = card.name;
     node.querySelector('p').textContent = `${card.set} · ${card.releaseDate?.slice(0, 4) || 'sem data'} · #${card.number}`;
     node.querySelector('.kind').textContent = card.kind === 'pokemon' ? card.family : 'Temática';
-    node.querySelector('.price').textContent = price != null ? `Liga: ${money.format(price)}` : 'Liga: consultar';
+    node.querySelector('.price').textContent = price != null ? `Mín. Liga: ${money.format(price)}` : 'Liga: consultar';
     node.querySelector('.owned-badge').hidden = !owned.has(card.id);
     node.addEventListener('dragstart', event => event.dataTransfer.setData('text/plain', `card:${card.id}`));
     node.addEventListener('click', event => { if (!event.target.closest('.add-card')) openCardDialog(card.id); });
@@ -335,7 +335,7 @@ function openCardDialog(id, pageIndex = null, slotIndex = null) {
 function saveDialogRecord() {
   if (!ui.dialog) return;
   const { id } = ui.dialog;
-  state.records[id] = { method: el.acquisitionMethod.value, paidPrice: parseMoney(el.paidPrice.value), ligaPrice: parseMoney(el.ligaPrice.value), note: el.cardNote.value.trim(), updatedAt: new Date().toISOString() };
+  state.records[id] = { method: el.acquisitionMethod.value, paidPrice: parseMoney(el.paidPrice.value), note: el.cardNote.value.trim(), updatedAt: new Date().toISOString() };
   saveState();
   renderPage();
   showToast(`Ficha de ${getCard(id).name} salva.`);
@@ -398,7 +398,7 @@ el.sortCards.addEventListener('change', () => {
   ui.sort = el.sortCards.value;
   renderCatalog();
   if (ui.sort === 'price' && !cards.some(card => ligaPriceFor(card) != null)) {
-    showToast('Cadastre ao menos um preço de referência Liga para ordenar por valor.');
+    showToast('Nenhuma carta possui valor mínimo Liga importado no snapshot atual.');
   }
 });
 el.sortDirection.addEventListener('click', () => {

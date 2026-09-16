@@ -148,6 +148,7 @@ h2 { font-size: clamp(26px, 3vw, 39px); }
 .money-input:focus-within { border-color: var(--terra); box-shadow: 0 0 0 3px rgba(147,99,68,.14); }
 .money-input b { align-self: stretch; display: grid; place-items: center; color: #7a604b; background: #efe2d0; font-size: 12px; }
 .money-input input { border: 0; border-radius: 0; box-shadow: none !important; }
+.money-input input[readonly] { color: #5f4a39; background: #f7f1e8; cursor: default; font-weight: 750; }
 .price-help { margin-top: 12px; color: #7b867e; font-size: 11px; }
 .dialog-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 20px; }
 .primary-button, .secondary-button { min-height: 41px; padding: 0 15px; border-radius: 9px; cursor: pointer; font-weight: 750; font-size: 14px; }
