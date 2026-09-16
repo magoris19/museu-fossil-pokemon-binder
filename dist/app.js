@@ -9,6 +9,7 @@ const ligaEditions = Array.isArray(ligaData.editions) ? ligaData.editions : [];
 const ligaEditionByName = new Map(ligaEditions.map(edition => [edition.edition_name, edition]));
 const ligaEditionByTcgSet = new Map(ligaEditions.filter(edition => edition.tcgdex_set).map(edition => [edition.tcgdex_set, edition]));
 const ligaPrints = ligaData.prints || {};
+const ligaPriceReferences = ligaData.priceReferences || {};
 
 const createPage = index => ({ id: `${Date.now()}-${index}`, title: index === 0 ? 'Origens do fóssil' : `Página ${index + 1}`, slots: [null, null, null, null] });
 const defaultState = () => ({ version: 1, currentPage: 0, pages: [createPage(0)], records: {} });
@@ -81,8 +82,12 @@ const normalizeStoredPrice = value => {
   const parsed = Number(normalized);
   return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
 };
+const ligaPriceReferenceFor = card => card ? ligaPriceReferences[card.id] || null : null;
 const ligaPriceFor = card => card
-  ? normalizeStoredPrice(recordFor(card.id).ligaPrice) ?? normalizeStoredPrice(card.ligaPrice)
+  ? normalizeStoredPrice(recordFor(card.id).ligaPrice) ?? normalizeStoredPrice(card.ligaPrice) ?? normalizeStoredPrice(ligaPriceReferenceFor(card)?.min_price)
+  : null;
+const formatObservedDate = value => value
+  ? new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(value))
   : null;
 const compareRelease = (a, b, direction) => {
   const aTime = releaseTime(a);
@@ -311,9 +316,13 @@ function openCardDialog(id, pageIndex = null, slotIndex = null) {
   el.dialogName.textContent = card.name;
   el.dialogMeta.textContent = `${card.set} · Lançada em ${formatReleaseDate(card)} · #${card.number}`;
   const ligaInfo = ligaLinkFor(card);
+  const priceReference = ligaPriceReferenceFor(card);
+  const observedDate = formatObservedDate(priceReference?.observed_at);
   el.ligaLink.href = ligaInfo.url;
   el.ligaLink.textContent = ligaInfo.text;
-  el.ligaStatus.textContent = ligaInfo.status;
+  el.ligaStatus.textContent = priceReference?.min_price != null
+    ? `${ligaInfo.status} Menor valor observado: ${money.format(priceReference.min_price)}${observedDate ? ` em ${observedDate}` : ''}.`
+    : ligaInfo.status;
   el.sourceLink.href = card.sourceUrl;
   el.acquisitionMethod.value = record.method || 'unknown';
   el.paidPrice.value = formatInput(record.paidPrice);
