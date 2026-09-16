@@ -18,12 +18,12 @@ function loadState() {
 }
 
 let state = loadState();
-let ui = { filter: 'all', query: '', family: 'all', sort: 'family', view: 'binder', dialog: null };
+let ui = { filter: 'all', query: '', family: 'all', sort: 'family', sortDirection: 'asc', view: 'binder', dialog: null };
 let toastTimer;
 
 const el = Object.fromEntries([
   'cardList','binderPage','resultCount','catalogCount','filledSlots','pageNumber','pageTotal','searchInput',
-  'familyFilter','sortCards','binderTitle','ownedCount','paidTotal','ligaTotal','boosterCount','cardDialog',
+  'familyFilter','sortCards','sortDirection','binderTitle','ownedCount','paidTotal','ligaTotal','boosterCount','cardDialog',
   'cardForm','dialogImage','dialogKind','dialogName','dialogMeta','ligaLink','sourceLink','acquisitionMethod',
   'paidPrice','ligaPrice','cardNote','removeCard','toast','pageActions','importFile'
 ].map(id => [id, document.getElementById(id)]));
@@ -42,6 +42,16 @@ const compareRelease = (a, b, direction) => {
   if (aTime == null) return 1;
   if (bTime == null) return -1;
   return direction * (aTime - bTime) || a.set.localeCompare(b.set, 'pt-BR') || a.number.localeCompare(b.number, 'pt-BR', { numeric: true });
+};
+const comparePrice = (a, b, direction) => {
+  const aPrice = recordFor(a.id).ligaPrice;
+  const bPrice = recordFor(b.id).ligaPrice;
+  const aMissing = !Number.isFinite(aPrice);
+  const bMissing = !Number.isFinite(bPrice);
+  if (aMissing && bMissing) return a.name.localeCompare(b.name, 'pt-BR', { numeric: true });
+  if (aMissing) return 1;
+  if (bMissing) return -1;
+  return direction * (aPrice - bPrice) || a.name.localeCompare(b.name, 'pt-BR', { numeric: true });
 };
 const formatReleaseDate = card => card.releaseDate
   ? new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${card.releaseDate}T00:00:00Z`))
@@ -85,15 +95,24 @@ function filteredCards() {
     const haystack = `${card.name} ${card.set} ${card.number} ${card.family}`.toLocaleLowerCase('pt-BR');
     return matchesType && matchesFamily && (!query || haystack.includes(query));
   });
+  const direction = ui.sortDirection === 'desc' ? -1 : 1;
   const sorters = {
-    family: (a, b) => (familyRank.get(a.family) - familyRank.get(b.family)) || a.name.localeCompare(b.name, 'pt-BR', { numeric: true }),
-    name: (a, b) => a.name.localeCompare(b.name, 'pt-BR', { numeric: true }) || a.set.localeCompare(b.set, 'pt-BR'),
-    set: (a, b) => a.set.localeCompare(b.set, 'pt-BR', { numeric: true }) || a.number.localeCompare(b.number, 'pt-BR', { numeric: true }),
-    'release-asc': (a, b) => compareRelease(a, b, 1),
-    'release-desc': (a, b) => compareRelease(a, b, -1),
-    price: (a, b) => (recordFor(b.id).ligaPrice ?? -1) - (recordFor(a.id).ligaPrice ?? -1) || a.name.localeCompare(b.name, 'pt-BR')
+    family: (a, b) => direction * ((familyRank.get(a.family) - familyRank.get(b.family)) || a.name.localeCompare(b.name, 'pt-BR', { numeric: true })),
+    name: (a, b) => direction * (a.name.localeCompare(b.name, 'pt-BR', { numeric: true }) || a.set.localeCompare(b.set, 'pt-BR')),
+    set: (a, b) => direction * (a.set.localeCompare(b.set, 'pt-BR', { numeric: true }) || a.number.localeCompare(b.number, 'pt-BR', { numeric: true })),
+    release: (a, b) => compareRelease(a, b, direction),
+    price: (a, b) => comparePrice(a, b, direction)
   };
-  return result.sort(sorters[ui.sort]);
+  return result.sort(sorters[ui.sort] || sorters.family);
+}
+
+function updateSortDirectionButton() {
+  const descending = ui.sortDirection === 'desc';
+  el.sortDirection.querySelector('span').textContent = descending ? '↓' : '↑';
+  el.sortDirection.querySelector('small').textContent = descending ? 'Decresc.' : 'Cresc.';
+  el.sortDirection.setAttribute('aria-label', descending ? 'Ordem decrescente' : 'Ordem crescente');
+  el.sortDirection.title = descending ? 'Alternar para ordem crescente' : 'Alternar para ordem decrescente';
+  el.sortDirection.setAttribute('aria-pressed', String(descending));
 }
 
 function applyImageFallback(img, card) {
@@ -307,6 +326,11 @@ document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', (
 el.searchInput.addEventListener('input', () => { ui.query = el.searchInput.value; renderCatalog(); });
 el.familyFilter.addEventListener('change', () => { ui.family = el.familyFilter.value; renderCatalog(); });
 el.sortCards.addEventListener('change', () => { ui.sort = el.sortCards.value; renderCatalog(); });
+el.sortDirection.addEventListener('click', () => {
+  ui.sortDirection = ui.sortDirection === 'asc' ? 'desc' : 'asc';
+  updateSortDirectionButton();
+  renderCatalog();
+});
 document.getElementById('prevPage').addEventListener('click', () => { state.currentPage = Math.max(0, state.currentPage - 1); saveState(); renderPage(); });
 document.getElementById('nextPage').addEventListener('click', () => { if (state.currentPage === state.pages.length - 1) state.pages.push(createPage(state.pages.length)); state.currentPage += 1; saveState(); renderPage(); });
 document.getElementById('renamePage').addEventListener('click', () => { const title = prompt('Nome desta página:', currentPage().title); if (title?.trim()) { currentPage().title = title.trim().slice(0, 80); saveState(); renderPage(); } });
@@ -319,5 +343,6 @@ el.importFile.addEventListener('change', () => { if (el.importFile.files[0]) imp
 el.acquisitionMethod.addEventListener('change', () => { el.paidPrice.placeholder = el.acquisitionMethod.value === 'booster' ? 'Sem custo individual' : '0,00'; });
 
 renderFamilies();
+updateSortDirectionButton();
 renderPage();
 
