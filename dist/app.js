@@ -50,10 +50,13 @@ const ligaLinkFor = card => {
   const edition = ligaEditionFor(card, print);
   const cardUrl = ligaUrlTools.buildCardUrl?.(print, edition);
   if (cardUrl) {
+    const isValidatedPrint = print?.validation_status === 'validated';
     return {
       url: cardUrl,
-      text: 'Abrir carta validada na LigaPokemon ↗',
-      status: 'URL individual validada por edição, número de colecionador e número Liga.'
+      text: isValidatedPrint ? 'Abrir carta validada na LigaPokemon ↗' : 'Abrir carta na LigaPokemon ↗',
+      status: isValidatedPrint
+        ? 'URL individual validada por edição, número de colecionador e número Liga.'
+        : 'URL individual gerada por edição validada e número oficial do TCGdex. Confira a página antes de registrar preço Liga.'
     };
   }
   const editionUrl = ligaUrlTools.buildEditionUrl?.(edition);
