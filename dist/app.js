@@ -34,6 +34,18 @@ const currentPage = () => state.pages[state.currentPage];
 const placedIds = () => state.pages.flatMap(page => page.slots).filter(Boolean);
 const recordFor = id => state.records[id] || {};
 const displayImage = (card, low = false) => low ? (card.imageLow || card.image) : card.image;
+const releaseTime = card => card.releaseDate ? Date.parse(`${card.releaseDate}T00:00:00Z`) : null;
+const compareRelease = (a, b, direction) => {
+  const aTime = releaseTime(a);
+  const bTime = releaseTime(b);
+  if (aTime == null && bTime == null) return a.name.localeCompare(b.name, 'pt-BR', { numeric: true });
+  if (aTime == null) return 1;
+  if (bTime == null) return -1;
+  return direction * (aTime - bTime) || a.set.localeCompare(b.set, 'pt-BR') || a.number.localeCompare(b.number, 'pt-BR', { numeric: true });
+};
+const formatReleaseDate = card => card.releaseDate
+  ? new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${card.releaseDate}T00:00:00Z`))
+  : 'data não informada';
 
 function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
@@ -77,6 +89,8 @@ function filteredCards() {
     family: (a, b) => (familyRank.get(a.family) - familyRank.get(b.family)) || a.name.localeCompare(b.name, 'pt-BR', { numeric: true }),
     name: (a, b) => a.name.localeCompare(b.name, 'pt-BR', { numeric: true }) || a.set.localeCompare(b.set, 'pt-BR'),
     set: (a, b) => a.set.localeCompare(b.set, 'pt-BR', { numeric: true }) || a.number.localeCompare(b.number, 'pt-BR', { numeric: true }),
+    'release-asc': (a, b) => compareRelease(a, b, 1),
+    'release-desc': (a, b) => compareRelease(a, b, -1),
     price: (a, b) => (recordFor(b.id).ligaPrice ?? -1) - (recordFor(a.id).ligaPrice ?? -1) || a.name.localeCompare(b.name, 'pt-BR')
   };
   return result.sort(sorters[ui.sort]);
@@ -114,7 +128,7 @@ function renderCatalog() {
     img.alt = `Carta ${card.name}`;
     applyImageFallback(img, card);
     node.querySelector('h3').textContent = card.name;
-    node.querySelector('p').textContent = `${card.set} · #${card.number}`;
+    node.querySelector('p').textContent = `${card.set} · ${card.releaseDate?.slice(0, 4) || 'sem data'} · #${card.number}`;
     node.querySelector('.kind').textContent = card.kind === 'pokemon' ? card.family : 'Temática';
     node.querySelector('.price').textContent = price != null ? `Liga: ${money.format(price)}` : 'Liga: consultar';
     node.querySelector('.owned-badge').hidden = !owned.has(card.id);
@@ -219,7 +233,7 @@ function openCardDialog(id, pageIndex = null, slotIndex = null) {
   applyImageFallback(el.dialogImage, card);
   el.dialogKind.textContent = card.kind === 'pokemon' ? `Pokémon fóssil · ${card.family}` : 'Acervo temático';
   el.dialogName.textContent = card.name;
-  el.dialogMeta.textContent = `${card.set} · #${card.number}`;
+  el.dialogMeta.textContent = `${card.set} · Lançada em ${formatReleaseDate(card)} · #${card.number}`;
   el.ligaLink.href = card.ligaUrl;
   el.sourceLink.href = card.sourceUrl;
   el.acquisitionMethod.value = record.method || 'unknown';
