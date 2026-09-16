@@ -15,7 +15,7 @@ Organize sua coleção em páginas de **quatro bolsos**, como em um fichário f�
 | Área | O que faz |
 | --- | --- |
 | **Fichário** | Mostra uma página com quatro bolsos proporcionais às cartas Pokémon. |
-| **Todas as cartas** | Exibe o catálogo completo, com busca, filtros e ordenação — inclusive por data de lançamento, da coleção mais antiga à mais recente ou vice-versa. |
+| **Todas as cartas** | Exibe o catálogo completo, com busca, filtros e ordenação — inclusive por data de lançamento. O botão de direção alterna qualquer critério entre crescente e decrescente. |
 | **Ficha da carta** | Guarda aquisição, valor pago, referência da Liga Pokémon e observações. |
 | **Páginas** | Permite criar páginas ilimitadas, renomeá-las e trocar cartas de lugar. |
 | **Resumo** | Soma o valor pago, a referência registrada e as cartas vindas de boosters. |
