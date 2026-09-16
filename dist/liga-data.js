@@ -26,7 +26,7 @@
   };
 
   window.LIGA_DATA = {
-      "generatedAt": "2026-09-16T15:46:00-03:00",
+      "generatedAt": "2026-09-16T16:03:00-03:00",
       "validationPolicy": "IDs, numeros e precos da LigaPokemon so entram como validados com evidencia real. Dados ausentes ficam pending_validation.",
       "editions": [
           {
@@ -64,10 +64,11 @@
               "tcgdex_set": "Neo Discovery",
               "tcgdex_set_id": "neo2",
               "release_date": "2001-06-01",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 64,
+              "liga_ed": "N2",
+              "validation_status": "validated",
+              "source_note": "Resultado indexado da LigaPokemon para Neo Discovery confirmou edid=64 e ed=N2.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=64%20ed=N2"
           },
           {
               "edition_name": "Neo Revelation",
@@ -174,10 +175,11 @@
               "tcgdex_set": "Legend Maker",
               "tcgdex_set_id": "ex12",
               "release_date": "2006-02-13",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 47,
+              "liga_ed": "LM",
+              "validation_status": "validated",
+              "source_note": "Resultado indexado da LigaPokemon para Legend Maker confirmou edid=47 e ed=LM.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=47%20ed=LM"
           },
           {
               "edition_name": "Holon Phantoms",
@@ -194,10 +196,11 @@
               "tcgdex_set": "Power Keepers",
               "tcgdex_set_id": "ex16",
               "release_date": "2007-02-17",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 43,
+              "liga_ed": "PK",
+              "validation_status": "validated",
+              "source_note": "Resultado indexado da LigaPokemon para Power Keepers confirmou edid=43 e ed=PK.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=43%20ed=PK"
           },
           {
               "edition_name": "DP Black Star Promos",
@@ -364,10 +367,11 @@
               "tcgdex_set": "Fates Collide",
               "tcgdex_set_id": "xy10",
               "release_date": "2016-05-02",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 96,
+              "liga_ed": "FCO",
+              "validation_status": "validated",
+              "source_note": "Resultado indexado da LigaPokemon para Fusão de Destinos/Fates Collide confirmou edid=96 e ed=FCO.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=96%20ed=FCO"
           },
           {
               "edition_name": "Steam Siege",
