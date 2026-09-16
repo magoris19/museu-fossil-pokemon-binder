@@ -26,7 +26,7 @@
   };
 
   window.LIGA_DATA = {
-      "generatedAt": "2026-09-16T16:03:00-03:00",
+      "generatedAt": "2026-09-16T16:15:00-03:00",
       "validationPolicy": "IDs, numeros e precos da LigaPokemon so entram como validados com evidencia real. Dados ausentes ficam pending_validation.",
       "editions": [
           {
@@ -35,9 +35,10 @@
               "tcgdex_set_id": "base3",
               "release_date": "1999-10-10",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "FO",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=FO observado em resultado indexado de carta da LigaPokemon; edid ainda pendente.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Golem%20(36%2F62)&ed=FO&num=36"
           },
           {
               "edition_name": "Team Rocket",
@@ -187,9 +188,9 @@
               "tcgdex_set_id": "ex13",
               "release_date": "2006-05-03",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "HP",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=HP observado em resultado indexado de carta da LigaPokemon; edid ainda pendente."
           },
           {
               "edition_name": "Power Keepers",
@@ -218,9 +219,10 @@
               "tcgdex_set_id": "dp2",
               "release_date": "2007-08-01",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "MT",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=MT observado em snippet indexado da página de edições da LigaPokemon; edid ainda pendente.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/edicoes"
           },
           {
               "edition_name": "POP Series 6",
@@ -328,9 +330,10 @@
               "tcgdex_set_id": "bw5",
               "release_date": "2012-05-09",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "DEX",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=DEX observado em snippet indexado da página de edições da LigaPokemon; edid ainda pendente.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/edicoes"
           },
           {
               "edition_name": "Plasma Blast",
@@ -338,9 +341,10 @@
               "tcgdex_set_id": "bw10",
               "release_date": "2013-08-14",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "PLB",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=PLB observado em resultado indexado de carta da LigaPokemon; edid ainda pendente.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Plasma%20Energy%20(91%2F101)&ed=PLB"
           },
           {
               "edition_name": "XY Black Star Promos",
@@ -489,9 +493,10 @@
               "tcgdex_set_id": "swsh4.5",
               "release_date": "2021-02-19",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "SHF",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=SHF observado em resultado indexado de carta da LigaPokemon; edid ainda pendente.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Indeedee%20V%20(39%2F72)&ed=SHF&num=39"
           },
           {
               "edition_name": "Shining Fates Shiny Vault",
@@ -509,9 +514,10 @@
               "tcgdex_set_id": "swsh7",
               "release_date": "2021-08-27",
               "liga_edid": null,
-              "liga_ed": null,
+              "liga_ed": "EVS",
               "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "source_note": "Código ed=EVS observado em snippet indexado da página de edições da LigaPokemon; edid ainda pendente.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/edicoes"
           },
           {
               "edition_name": "Brilliant Stars",
