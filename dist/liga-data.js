@@ -26,7 +26,7 @@
   };
 
   window.LIGA_DATA = {
-      "generatedAt": "2026-09-16T16:33:00-03:00",
+      "generatedAt": "2026-09-16T16:52:00-03:00",
       "validationPolicy": "IDs, numeros e precos da LigaPokemon so entram como validados com evidencia real. Dados ausentes ficam pending_validation. A API publica do CyndaQ pode ser usada como fonte auxiliar quando expõe liga_id, code, liga_url e correspondencia tcgdex_id clara; precos seguem pendentes ate validacao da pagina individual.",
       "editions": [
           {
@@ -105,10 +105,11 @@
               "tcgdex_set": "Legendary Collection",
               "tcgdex_set_id": "lc",
               "release_date": "2002-05-24",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 86,
+              "liga_ed": "LC",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=86%20ed=LC"
           },
           {
               "edition_name": "Aquapolis",
@@ -149,30 +150,33 @@
               "tcgdex_set": "Team Magma vs Team Aqua",
               "tcgdex_set_id": "ex4",
               "release_date": "2004-03-01",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 55,
+              "liga_ed": "MA",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=55%20ed=MA"
           },
           {
               "edition_name": "Hidden Legends",
               "tcgdex_set": "Hidden Legends",
               "tcgdex_set_id": "ex5",
               "release_date": "2004-06-01",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 54,
+              "liga_ed": "HL",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=54%20ed=HL"
           },
           {
               "edition_name": "POP Series 1",
               "tcgdex_set": "POP Series 1",
               "tcgdex_set_id": "pop1",
               "release_date": "2004-09-01",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 73,
+              "liga_ed": "P1",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=73%20ed=P1"
           },
           {
               "edition_name": "Delta Species",
@@ -486,20 +490,22 @@
               "tcgdex_set": "Unified Minds",
               "tcgdex_set_id": "sm11",
               "release_date": "2019-08-02",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 158,
+              "liga_ed": "UNM",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=158%20ed=UNM"
           },
           {
               "edition_name": "Cosmic Eclipse",
               "tcgdex_set": "Cosmic Eclipse",
               "tcgdex_set_id": "sm12",
               "release_date": "2019-11-01",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 163,
+              "liga_ed": "CEC",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=163%20ed=CEC"
           },
           {
               "edition_name": "SWSH Black Star Promos",
@@ -518,20 +524,22 @@
               "tcgdex_set": "Rebel Clash",
               "tcgdex_set_id": "swsh2",
               "release_date": "2020-05-01",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 169,
+              "liga_ed": "RCL",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=169%20ed=RCL"
           },
           {
               "edition_name": "Darkness Ablaze",
               "tcgdex_set": "Darkness Ablaze",
               "tcgdex_set_id": "swsh3",
               "release_date": "2020-08-14",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 170,
+              "liga_ed": "DAA",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=170%20ed=DAA"
           },
           {
               "edition_name": "Vivid Voltage",
@@ -553,19 +561,19 @@
               "liga_edid": 240,
               "liga_ed": "SHF",
               "validation_status": "validated",
-              "source_note": "Validado por correspondência tcgdex_id=swsh4.5 na API pública do CyndaQ, que informa liga_id=240, code=SHF e liga_url da LigaPokemon para Destinos Brilhantes.",
-              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=240%20ed=SHF",
-              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions"
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=240%20ed=SHF"
           },
           {
               "edition_name": "Shining Fates Shiny Vault",
               "tcgdex_set": "Shining Fates Shiny Vault",
               "tcgdex_set_id": "swsh4.5sv",
               "release_date": "2021-02-19",
-              "liga_edid": null,
-              "liga_ed": null,
-              "validation_status": "pending",
-              "source_note": "Aguardando identificação manual ou evidência direta da LigaPokemon; identificadores não foram inferidos."
+              "liga_edid": 241,
+              "liga_ed": "SFS",
+              "validation_status": "validated",
+              "source_note": "Validado manualmente a partir de link direto da LigaPokemon informado pelo usuário.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=241%20ed=SFS"
           },
           {
               "edition_name": "Evolving Skies",
