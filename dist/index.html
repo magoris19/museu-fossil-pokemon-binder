@@ -8,7 +8,7 @@
   <title>Museu Fóssil — Fichário Pokémon</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121714'/%3E%3Cpath d='M13 39c9-18 27-23 39-12-12-2-17 4-18 11-1 8-9 12-17 8 8-1 12-6 11-12-5 1-9 3-15 5Z' fill='%23d4a64d'/%3E%3Ccircle cx='43' cy='23' r='3' fill='%23f5e7bc'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://assets.tcgdex.net">
-  <link rel="stylesheet" href="styles.css?v=20260916-2">
+  <link rel="stylesheet" href="styles.css?v=20260916-4">
 </head>
 <body>
   <header class="topbar">
@@ -52,6 +52,7 @@
         <label><span>Família</span><select id="familyFilter"><option value="all">Todas as famílias</option></select></label>
         <label><span>Ordenar</span><span class="sort-control"><select id="sortCards"><option value="family">Família</option><option value="name">Nome</option><option value="set">Coleção</option><option value="release">Data de lançamento</option><option value="price">Preço Liga</option></select><button type="button" class="sort-direction" id="sortDirection" aria-label="Ordem crescente" title="Alternar para ordem decrescente"><span aria-hidden="true">↑</span><small>Cresc.</small></button></span></label>
       </div>
+      <p class="sort-status" id="sortStatus" hidden></p>
       <div id="cardList" class="card-list" aria-live="polite"></div>
       <p class="source-note">Imagens e catálogo: <a href="https://tcgdex.dev/" target="_blank" rel="noreferrer">TCGdex</a>. Consulte o valor brasileiro na ficha da carta.</p>
     </aside>
@@ -100,6 +101,7 @@
             <a id="ligaLink" target="_blank" rel="noreferrer">Consultar na LigaPokemon ↗</a>
             <a id="sourceLink" target="_blank" rel="noreferrer">Dados da carta ↗</a>
           </div>
+          <p class="liga-status" id="ligaStatus"></p>
           <div class="form-grid">
             <label><span>Como consegui</span><select id="acquisitionMethod"><option value="purchase">Comprei avulsa</option><option value="booster">Veio em booster</option><option value="trade">Troca</option><option value="gift">Presente</option><option value="unknown">Ainda não registrei</option></select></label>
             <label><span>Valor que paguei</span><div class="money-input"><b>R$</b><input id="paidPrice" inputmode="decimal" placeholder="0,00"></div></label>
@@ -118,8 +120,8 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="cards-data.js?v=20260916-2"></script>
-  <script src="app.js?v=20260916-2"></script>
+  <script src="cards-data.js?v=20260916-4"></script>
+  <script src="liga-data.js?v=20260916-4"></script>
+  <script src="app.js?v=20260916-4"></script>
 </body>
 </html>
-

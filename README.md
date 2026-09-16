@@ -69,6 +69,8 @@ Cada ficha possui um link de consulta para a Liga Pokémon. A aplicação deixa 
 
 Os preços não são preenchidos automaticamente porque a Liga Pokémon não disponibiliza uma API pública aberta. Assim, o fichário não apresenta uma cotação antiga como se fosse atual.
 
+As URLs da Liga Pokémon são geradas a partir de componentes validados quando eles existem: edição, `edid`, código `ed`, número de colecionador e número Liga. Dados ainda não confirmados ficam como **pendentes de validação**, sem preço inventado e sem transformar busca genérica em preço oficial.
+
 ## 🚀 Publicação no GitHub Pages
 
 O repositório já inclui o fluxo em [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml), que publica a pasta [`dist/`](dist/) sempre que há uma atualização na branch `main`.
@@ -90,6 +92,7 @@ Para ativar:
 │   ├── styles.css                       # visual do museu e do fichário
 │   ├── app.js                           # interação e salvamento local
 │   ├── cards-data.js                     # catálogo de cartas
+│   ├── liga-data.js                      # dados validados da Liga Pokémon
 │   └── .nojekyll                         # evita processamento Jekyll
 └── README.md
 ```

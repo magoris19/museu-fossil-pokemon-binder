@@ -1,8 +1,14 @@
 const cards = window.FOSSIL_CARDS || [];
+const ligaData = window.LIGA_DATA || {};
+const ligaUrlTools = window.LIGA_URLS || {};
 const STORAGE_KEY = 'museu-fossil-binder-v3';
 const speciesOrder = [...new Set(cards.filter(card => card.family !== 'Acervo temático').map(card => card.family))];
 const familyRank = new Map([...speciesOrder, 'Acervo temático'].map((family, index) => [family, index]));
 const money = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+const ligaEditions = Array.isArray(ligaData.editions) ? ligaData.editions : [];
+const ligaEditionByName = new Map(ligaEditions.map(edition => [edition.edition_name, edition]));
+const ligaEditionByTcgSet = new Map(ligaEditions.filter(edition => edition.tcgdex_set).map(edition => [edition.tcgdex_set, edition]));
+const ligaPrints = ligaData.prints || {};
 
 const createPage = index => ({ id: `${Date.now()}-${index}`, title: index === 0 ? 'Origens do fóssil' : `Página ${index + 1}`, slots: [null, null, null, null] });
 const defaultState = () => ({ version: 1, currentPage: 0, pages: [createPage(0)], records: {} });
@@ -23,8 +29,8 @@ let toastTimer;
 
 const el = Object.fromEntries([
   'cardList','binderPage','resultCount','catalogCount','filledSlots','pageNumber','pageTotal','searchInput',
-  'familyFilter','sortCards','sortDirection','binderTitle','ownedCount','paidTotal','ligaTotal','boosterCount','cardDialog',
-  'cardForm','dialogImage','dialogKind','dialogName','dialogMeta','ligaLink','sourceLink','acquisitionMethod',
+  'familyFilter','sortCards','sortDirection','sortStatus','binderTitle','ownedCount','paidTotal','ligaTotal','boosterCount','cardDialog',
+  'cardForm','dialogImage','dialogKind','dialogName','dialogMeta','ligaLink','ligaStatus','sourceLink','acquisitionMethod',
   'paidPrice','ligaPrice','cardNote','removeCard','toast','pageActions','importFile'
 ].map(id => [id, document.getElementById(id)]));
 
@@ -35,6 +41,46 @@ const placedIds = () => state.pages.flatMap(page => page.slots).filter(Boolean);
 const recordFor = id => state.records[id] || {};
 const displayImage = (card, low = false) => low ? (card.imageLow || card.image) : card.image;
 const releaseTime = card => card.releaseDate ? Date.parse(`${card.releaseDate}T00:00:00Z`) : null;
+const fallbackLigaSearchUrl = card => `https://www.ligapokemon.com.br/?view=cards/search&card=${encodeURIComponent(`${card.name} ${card.number}`)}`;
+const ligaPrintFor = card => ligaPrints[card.id] || null;
+const ligaEditionFor = (card, print = ligaPrintFor(card)) =>
+  (print?.edition && ligaEditionByName.get(print.edition)) || ligaEditionByTcgSet.get(card.set) || null;
+const ligaLinkFor = card => {
+  const print = ligaPrintFor(card);
+  const edition = ligaEditionFor(card, print);
+  const cardUrl = ligaUrlTools.buildCardUrl?.(print, edition);
+  if (cardUrl) {
+    return {
+      url: cardUrl,
+      text: 'Abrir carta validada na LigaPokemon ↗',
+      status: 'URL individual validada por edição, número de colecionador e número Liga.'
+    };
+  }
+  const editionUrl = ligaUrlTools.buildEditionUrl?.(edition);
+  if (editionUrl) {
+    return {
+      url: editionUrl,
+      text: 'Buscar edição validada na LigaPokemon ↗',
+      status: 'Edição validada; impressão desta carta ainda está pendente de validação.'
+    };
+  }
+  return {
+    url: card.ligaUrl || fallbackLigaSearchUrl(card),
+    text: 'Buscar na LigaPokemon ↗',
+    status: 'Pendente de validação: edid, código da edição, impressão e preço ainda não foram confirmados.'
+  };
+};
+const normalizeStoredPrice = value => {
+  if (typeof value === 'number') return Number.isFinite(value) && value >= 0 ? value : null;
+  if (typeof value !== 'string' || !value.trim()) return null;
+  const clean = value.trim().replace(/\s/g, '').replace(/R\$/i, '');
+  const normalized = clean.includes(',') ? clean.replace(/\./g, '').replace(',', '.') : clean;
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+};
+const ligaPriceFor = card => card
+  ? normalizeStoredPrice(recordFor(card.id).ligaPrice) ?? normalizeStoredPrice(card.ligaPrice)
+  : null;
 const compareRelease = (a, b, direction) => {
   const aTime = releaseTime(a);
   const bTime = releaseTime(b);
@@ -44,11 +90,11 @@ const compareRelease = (a, b, direction) => {
   return direction * (aTime - bTime) || a.set.localeCompare(b.set, 'pt-BR') || a.number.localeCompare(b.number, 'pt-BR', { numeric: true });
 };
 const comparePrice = (a, b, direction) => {
-  const aPrice = recordFor(a.id).ligaPrice;
-  const bPrice = recordFor(b.id).ligaPrice;
-  const aMissing = !Number.isFinite(aPrice);
-  const bMissing = !Number.isFinite(bPrice);
-  if (aMissing && bMissing) return a.name.localeCompare(b.name, 'pt-BR', { numeric: true });
+  const aPrice = ligaPriceFor(a);
+  const bPrice = ligaPriceFor(b);
+  const aMissing = aPrice == null;
+  const bMissing = bPrice == null;
+  if (aMissing && bMissing) return direction * a.name.localeCompare(b.name, 'pt-BR', { numeric: true });
   if (aMissing) return 1;
   if (bMissing) return -1;
   return direction * (aPrice - bPrice) || a.name.localeCompare(b.name, 'pt-BR', { numeric: true });
@@ -126,6 +172,14 @@ function applyImageFallback(img, card) {
 function renderCatalog() {
   const visible = filteredCards();
   const owned = new Set(placedIds());
+  const pricedCount = visible.filter(card => ligaPriceFor(card) != null).length;
+  el.sortStatus.hidden = ui.sort !== 'price';
+  if (ui.sort === 'price') {
+    el.sortStatus.classList.toggle('is-empty', pricedCount === 0);
+    el.sortStatus.textContent = pricedCount
+      ? `${pricedCount} ${pricedCount === 1 ? 'carta possui' : 'cartas possuem'} preço Liga informado. As demais ficam no fim.`
+      : 'Nenhuma carta possui preço Liga informado. Clique em uma carta e preencha “Preço de referência Liga”.';
+  }
   el.cardList.replaceChildren();
   el.resultCount.textContent = visible.length;
   el.catalogCount.textContent = cards.length;
@@ -141,7 +195,7 @@ function renderCatalog() {
   visible.forEach(card => {
     const node = template.content.firstElementChild.cloneNode(true);
     const img = node.querySelector('img');
-    const price = recordFor(card.id).ligaPrice;
+    const price = ligaPriceFor(card);
     node.dataset.cardId = card.id;
     img.src = displayImage(card, true);
     img.alt = `Carta ${card.name}`;
@@ -200,7 +254,7 @@ function renderPage() {
 function renderStats() {
   const placements = placedIds();
   const paid = placements.reduce((total, id) => total + (recordFor(id).paidPrice || 0), 0);
-  const liga = placements.reduce((total, id) => total + (recordFor(id).ligaPrice || 0), 0);
+  const liga = placements.reduce((total, id) => total + (ligaPriceFor(getCard(id)) || 0), 0);
   const boosters = placements.filter(id => recordFor(id).method === 'booster').length;
   el.ownedCount.textContent = placements.length;
   el.paidTotal.textContent = money.format(paid);
@@ -253,11 +307,14 @@ function openCardDialog(id, pageIndex = null, slotIndex = null) {
   el.dialogKind.textContent = card.kind === 'pokemon' ? `Pokémon fóssil · ${card.family}` : 'Acervo temático';
   el.dialogName.textContent = card.name;
   el.dialogMeta.textContent = `${card.set} · Lançada em ${formatReleaseDate(card)} · #${card.number}`;
-  el.ligaLink.href = card.ligaUrl;
+  const ligaInfo = ligaLinkFor(card);
+  el.ligaLink.href = ligaInfo.url;
+  el.ligaLink.textContent = ligaInfo.text;
+  el.ligaStatus.textContent = ligaInfo.status;
   el.sourceLink.href = card.sourceUrl;
   el.acquisitionMethod.value = record.method || 'unknown';
   el.paidPrice.value = formatInput(record.paidPrice);
-  el.ligaPrice.value = formatInput(record.ligaPrice);
+  el.ligaPrice.value = formatInput(ligaPriceFor(card));
   el.cardNote.value = record.note || '';
   el.removeCard.hidden = pageIndex == null || slotIndex == null;
   el.cardDialog.showModal();
@@ -291,7 +348,7 @@ function setView(view) {
 }
 
 function exportData() {
-  const bundle = { app: 'Museu Fóssil', exportedAt: new Date().toISOString(), catalogGeneratedAt: window.FOSSIL_META?.generatedAt, state };
+  const bundle = { app: 'Museu Fóssil', exportedAt: new Date().toISOString(), catalogGeneratedAt: window.FOSSIL_META?.generatedAt, ligaDataGeneratedAt: ligaData.generatedAt, state };
   const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: 'application/json' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
@@ -325,7 +382,13 @@ document.querySelectorAll('.filter').forEach(button => button.addEventListener('
 document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => setView(tab.dataset.view)));
 el.searchInput.addEventListener('input', () => { ui.query = el.searchInput.value; renderCatalog(); });
 el.familyFilter.addEventListener('change', () => { ui.family = el.familyFilter.value; renderCatalog(); });
-el.sortCards.addEventListener('change', () => { ui.sort = el.sortCards.value; renderCatalog(); });
+el.sortCards.addEventListener('change', () => {
+  ui.sort = el.sortCards.value;
+  renderCatalog();
+  if (ui.sort === 'price' && !cards.some(card => ligaPriceFor(card) != null)) {
+    showToast('Cadastre ao menos um preço de referência Liga para ordenar por valor.');
+  }
+});
 el.sortDirection.addEventListener('click', () => {
   ui.sortDirection = ui.sortDirection === 'asc' ? 'desc' : 'asc';
   updateSortDirectionButton();
@@ -345,4 +408,3 @@ el.acquisitionMethod.addEventListener('change', () => { el.paidPrice.placeholder
 renderFamilies();
 updateSortDirectionButton();
 renderPage();
-
