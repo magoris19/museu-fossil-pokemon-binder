@@ -1,4 +1,4 @@
-# 🏛️ Museu Fóssil · Fichário Pokémon
+# <a href="https://magoris19.github.io/museu-fossil-pokemon-binder/" target="_blank" rel="noopener noreferrer">🦴🦕🏛️🦖 Museu Fóssil · Fichário Pokémon</a>
 
 > Um fichário online para montar, consultar e valorizar uma coleção de cartas Pokémon fósseis.
 
