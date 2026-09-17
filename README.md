@@ -65,7 +65,7 @@ Isso também funciona entre navegadores diferentes. Cada dispositivo mantém sua
 
 ## 💰 Sobre os valores
 
-Cada ficha possui um link de consulta para a Liga Pokémon. A aplicação deixa a **referência em reais editável**, para você registrar a cotação que considerar correta no momento.
+Cada ficha possui um link de consulta para a Liga Pokémon. O **valor mínimo Liga** é preenchido automaticamente a partir do snapshot publicado; o campo **valor que paguei** continua editável para registrar seu gasto real.
 
 Os preços publicados são referências do catálogo público CyndaQ, coletadas na Liga Pokémon. A ficha informa a data observada e abre o anúncio correspondente à mesma carta. Não são cotações em tempo real; condição, idioma e acabamento podem variar. O valor pago pelo usuário permanece separado.
 
