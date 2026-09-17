@@ -233,10 +233,19 @@ function renderCatalog() {
       ? `Referência observada em ${formatObservedDate(ligaPriceReferenceFor(card)?.observed_at) || 'data não informada'}. Confira condição, idioma e acabamento na Liga.`
       : ligaMissingReason(card);
     node.querySelector('.owned-badge').hidden = !owned.has(card.id);
+    const actionButton = node.querySelector('.add-card');
+    if (owned.has(card.id)) {
+      actionButton.textContent = '−';
+      actionButton.classList.add('remove-card');
+      actionButton.setAttribute('aria-label', `Retirar ${card.name} do fichário`);
+      actionButton.title = 'Retirar do fichário';
+      actionButton.addEventListener('click', () => removeFromBinder(card.id));
+    } else {
+      actionButton.addEventListener('click', () => addToFirstEmpty(card.id));
+    }
     node.addEventListener('dragstart', event => event.dataTransfer.setData('text/plain', `card:${card.id}`));
     node.addEventListener('click', event => { if (!event.target.closest('.add-card')) openCardDialog(card.id); });
     node.addEventListener('keydown', event => { if (event.key === 'Enter') openCardDialog(card.id); });
-    node.querySelector('.add-card').addEventListener('click', () => addToFirstEmpty(card.id));
     fragment.append(node);
   });
   el.cardList.append(fragment);
@@ -305,6 +314,18 @@ function addToFirstEmpty(id) {
   saveState();
   renderPage();
   showToast(`${getCard(id).name} foi para a página ${target.pageIndex + 1}.`);
+}
+
+function removeFromBinder(id) {
+  for (const page of state.pages) {
+    const slot = page.slots.indexOf(id);
+    if (slot < 0) continue;
+    page.slots[slot] = null;
+    saveState();
+    renderPage();
+    showToast(`${getCard(id).name} foi retirado do fichário.`);
+    return;
+  }
 }
 
 function handleDrop(payload, targetSlot) {
