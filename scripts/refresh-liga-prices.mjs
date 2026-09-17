@@ -76,7 +76,7 @@ for (const set of targetSets) {
         observed_at: row.price_observed_at, match_key: `${edition.code} #${row.number}`,
         source_note: 'Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real.'
       };
-    } else {
+    } else if (!String(data.priceReferences[card.id]?.source || '').startsWith('ligapokemon_official')) {
       delete data.priceReferences[card.id];
     }
     report.push({ id: card.id, name: card.name, set, status, min_price: data.priceReferences[card.id]?.min_price ?? null });

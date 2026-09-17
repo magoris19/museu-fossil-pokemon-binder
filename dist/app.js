@@ -335,7 +335,7 @@ function openCardDialog(id, pageIndex = null, slotIndex = null) {
   el.ligaLink.href = ligaInfo.url;
   el.ligaLink.textContent = ligaInfo.text;
   el.ligaStatus.textContent = priceReference?.min_price != null
-    ? `${ligaInfo.status} Menor valor observado pelo CyndaQ na Liga: ${money.format(priceReference.min_price)}${observedDate ? ` em ${observedDate}` : ''}. Condição, idioma e acabamento podem variar; consulte os anúncios atuais.`
+    ? `${ligaInfo.status} Menor valor observado na LigaPokemon: ${money.format(priceReference.min_price)}${observedDate ? ` em ${observedDate}` : ''}. Condição, idioma e acabamento podem variar; consulte os anúncios atuais.`
     : `${ligaMissingReason(card)} Use o link da Liga para conferir os anúncios. Ausência de cotação não significa carta sem valor.`;
   el.sourceLink.href = card.sourceUrl;
   el.acquisitionMethod.value = record.method || 'unknown';

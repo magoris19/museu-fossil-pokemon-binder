@@ -3175,6 +3175,48 @@
       "price_status": "pending_validation",
       "printGenerationPolicy": "Impressões com validation_status=generated geram link individual usando edição LigaPokemon validada + card_name/number do TCGdex + total oficial da coleção. Isso não valida preço; valores da Liga só devem ser preenchidos após conferência da página individual.",
       "priceReferences": {
+          "sv03.5-138": {
+              "source": "ligapokemon_official_snapshot",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%28138%2F165%29&ed=MEW&num=138",
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%28138%2F165%29&ed=MEW&num=138",
+              "min_price_cents": 299,
+              "min_price": 2.99,
+              "avg_price_cents": 1625,
+              "avg_price": 16.25,
+              "max_price_cents": 3490,
+              "max_price": 34.9,
+              "observed_at": "2026-09-17T12:37:00.000Z",
+              "match_key": "MEW #138",
+              "source_note": "Menor valor observado diretamente na página oficial da LigaPokemon; condição, idioma e acabamento podem variar."
+          },
+          "sv03.5-139": {
+              "source": "ligapokemon_official_snapshot",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%28139%2F165%29&ed=MEW&num=139",
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%28139%2F165%29&ed=MEW&num=139",
+              "min_price_cents": 1200,
+              "min_price": 12,
+              "avg_price_cents": 2351,
+              "avg_price": 23.51,
+              "max_price_cents": 2500,
+              "max_price": 25,
+              "observed_at": "2026-09-17T12:38:00.000Z",
+              "match_key": "MEW #139",
+              "source_note": "Menor valor observado diretamente na página oficial da LigaPokemon; condição, idioma e acabamento podem variar."
+          },
+          "sv03.5-140": {
+              "source": "ligapokemon_official_snapshot",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%28140%2F165%29&ed=MEW&num=140",
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%28140%2F165%29&ed=MEW&num=140",
+              "min_price_cents": 767,
+              "min_price": 7.67,
+              "avg_price_cents": 1321,
+              "avg_price": 13.21,
+              "max_price_cents": 2000,
+              "max_price": 20,
+              "observed_at": "2026-09-17T12:39:00.000Z",
+              "match_key": "MEW #140",
+              "source_note": "Menor valor observado diretamente na página oficial da LigaPokemon; condição, idioma e acabamento podem variar."
+          },
           "neo4-37": {
               "source": "cyndaq_ligapokemon_snapshot",
               "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/22/cards?limit=2500",
