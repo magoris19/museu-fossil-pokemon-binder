@@ -86,6 +86,27 @@ Para ativar:
 3. Aguarde a execução do fluxo **Publicar fichário no GitHub Pages**;
 4. Acesse o endereço exibido pelo GitHub, no formato `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`.
 
+## 🔄 Como continuar em outra máquina
+
+O GitHub é a fonte oficial do código. A pasta `dist/` contém a versão que o GitHub Pages publica; portanto, não é necessário copiar arquivos manualmente entre computadores.
+
+Em uma máquina nova, clone o repositório uma vez:
+
+```bash
+git clone https://github.com/magoris19/museu-fossil-pokemon-binder.git
+cd museu-fossil-pokemon-binder
+```
+
+Antes de continuar um trabalho em uma cópia já clonada, sincronize-a:
+
+```bash
+git pull --ff-only origin main
+```
+
+Também existe o atalho `scripts/sync-latest.ps1` para Windows. Ele interrompe a atualização se houver alterações locais não salvas, evitando que uma máquina sobrescreva o trabalho de outra.
+
+As cartas colocadas no fichário, os valores pagos e as observações ficam no navegador, não no GitHub. Para levar esses dados junto, use **Exportar** em uma máquina e **Importar** na outra.
+
 ## 🧱 Estrutura do projeto
 
 ```text
