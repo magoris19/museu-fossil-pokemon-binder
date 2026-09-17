@@ -30,7 +30,7 @@ let toastTimer;
 
 const el = Object.fromEntries([
   'cardList','binderPage','resultCount','catalogCount','filledSlots','pageNumber','pageTotal','searchInput',
-  'familyFilter','sortCards','sortDirection','sortStatus','binderTitle','ownedCount','paidTotal','ligaTotal','boosterCount','cardDialog',
+  'familyFilter','sortCards','sortDirection','sortStatus','catalogTitle','binderTitle','ownedCount','paidTotal','ligaTotal','boosterCount','cardDialog',
   'cardForm','dialogImage','dialogKind','dialogName','dialogMeta','ligaLink','ligaStatus','sourceLink','acquisitionMethod',
   'paidPrice','ligaPrice','cardNote','removeCard','toast','pageActions','importFile'
 ].map(id => [id, document.getElementById(id)]));
@@ -155,7 +155,12 @@ function filteredCards() {
   const query = ui.query.trim().toLocaleLowerCase('pt-BR');
   const owned = new Set(placedIds());
   const result = cards.filter(card => {
-    const matchesType = ui.filter === 'all' || (ui.filter === 'owned' ? owned.has(card.id) : card.kind === ui.filter);
+    const matchesType = ui.filter === 'all'
+      || (ui.filter === 'owned' && owned.has(card.id))
+      || (ui.filter === 'available' && !owned.has(card.id))
+      || (ui.filter === 'purchased' && recordFor(card.id).method === 'purchase')
+      || (ui.filter === 'pokemon' && card.kind === 'pokemon')
+      || (ui.filter === 'theme' && card.kind === 'theme');
     const matchesFamily = ui.family === 'all' || card.family === ui.family;
     const haystack = `${card.name} ${card.set} ${card.number} ${card.family}`.toLocaleLowerCase('pt-BR');
     return matchesType && matchesFamily && (!query || haystack.includes(query));
@@ -201,6 +206,7 @@ function renderCatalog() {
   }
   el.cardList.replaceChildren();
   el.resultCount.textContent = visible.length;
+  el.catalogTitle.textContent = ({ all: 'Todas as cartas', pokemon: 'Cartas Pokémon', theme: 'Cartas temáticas', available: 'Cartas disponíveis', purchased: 'Cartas compradas', owned: 'Cartas no fichário' })[ui.filter] || 'Cartas';
   el.catalogCount.textContent = cards.length;
   if (!visible.length) {
     const empty = document.createElement('p');

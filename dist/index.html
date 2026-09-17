@@ -35,7 +35,7 @@
   <main class="workspace">
     <aside class="catalog-panel" aria-label="Catálogo de cartas">
       <div class="panel-heading">
-        <div><span class="eyebrow">Acervo</span><h1>Cartas disponíveis</h1></div>
+        <div><span class="eyebrow">Acervo</span><h1 id="catalogTitle">Todas as cartas</h1></div>
         <span class="result-count" id="resultCount">0</span>
       </div>
       <label class="search-box">
@@ -46,6 +46,8 @@
         <button class="filter is-active" data-filter="all">Todas</button>
         <button class="filter" data-filter="pokemon">Pokémon</button>
         <button class="filter" data-filter="theme">Temáticas</button>
+        <button class="filter" data-filter="available">Disponíveis</button>
+        <button class="filter" data-filter="purchased">Compradas</button>
         <button class="filter" data-filter="owned">No fichário</button>
       </div>
       <div class="select-row">
