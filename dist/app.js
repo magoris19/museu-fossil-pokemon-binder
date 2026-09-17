@@ -233,18 +233,14 @@ function renderCatalog() {
       ? `Referência observada em ${formatObservedDate(ligaPriceReferenceFor(card)?.observed_at) || 'data não informada'}. Confira condição, idioma e acabamento na Liga.`
       : ligaMissingReason(card);
     node.querySelector('.owned-badge').hidden = !owned.has(card.id);
-    const actionButton = node.querySelector('.add-card');
-    if (owned.has(card.id)) {
-      actionButton.textContent = '−';
-      actionButton.classList.add('remove-card');
-      actionButton.setAttribute('aria-label', `Retirar ${card.name} do fichário`);
-      actionButton.title = 'Retirar do fichário';
-      actionButton.addEventListener('click', () => removeFromBinder(card.id));
-    } else {
-      actionButton.addEventListener('click', () => addToFirstEmpty(card.id));
-    }
+    const addButton = node.querySelector('.add-card');
+    const removeButton = node.querySelector('.remove-card');
+    addButton.addEventListener('click', () => addToFirstEmpty(card.id));
+    removeButton.hidden = !owned.has(card.id);
+    removeButton.setAttribute('aria-label', `Retirar ${card.name} do fichário`);
+    removeButton.addEventListener('click', () => removeFromBinder(card.id));
     node.addEventListener('dragstart', event => event.dataTransfer.setData('text/plain', `card:${card.id}`));
-    node.addEventListener('click', event => { if (!event.target.closest('.add-card')) openCardDialog(card.id); });
+    node.addEventListener('click', event => { if (!event.target.closest('.card-action')) openCardDialog(card.id); });
     node.addEventListener('keydown', event => { if (event.key === 'Enter') openCardDialog(card.id); });
     fragment.append(node);
   });
