@@ -206,11 +206,11 @@
               "tcgdex_set": "Holon Phantoms",
               "tcgdex_set_id": "ex13",
               "release_date": "2006-05-03",
-              "liga_edid": 531,
-              "liga_ed": "HP",
+              "liga_edid": 46,
+              "liga_ed": "EHP",
               "validation_status": "validated",
-              "source_note": "Validado por correspondência tcgdex_id=ex13 na API pública do CyndaQ, que informa liga_id=531, code=HP e liga_url da LigaPokemon para Holon Phantoms.",
-              "source_url": "https://www.ligapokemon.com.br/?view=cards%2Fsearch&card=edid%3D531+ed%3DHP",
+              "source_note": "EX Holon Phantoms internacional: EHP, edid 46, numeração /110. HP, edid 531, corresponde a outra edição e não deve ser usada para ex13.",
+              "source_url": "https://www.ligapokemon.com.br/?view=cards/search&card=edid=46%20ed=EHP",
               "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions"
           },
           {
@@ -769,82 +769,91 @@
               "card_name": "Omanyte",
               "edition": "151",
               "collector_number": "138/165",
-              "liga_num": 138,
+              "liga_num": "138",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Omanyte%20(138%2F165)&ed=MEW&num=138",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%28138%2F165%29&ed=MEW&num=138",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-180": {
               "card_name": "Omanyte",
               "edition": "151",
               "collector_number": "180/165",
-              "liga_num": 180,
+              "liga_num": "180",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Omanyte%20(180%2F165)&ed=MEW&num=180",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%28180%2F165%29&ed=MEW&num=180",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-139": {
               "card_name": "Omastar",
               "edition": "151",
               "collector_number": "139/165",
-              "liga_num": 139,
+              "liga_num": "139",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Omastar%20(139%2F165)&ed=MEW&num=139",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%28139%2F165%29&ed=MEW&num=139",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-140": {
               "card_name": "Kabuto",
               "edition": "151",
               "collector_number": "140/165",
-              "liga_num": 140,
+              "liga_num": "140",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Kabuto%20(140%2F165)&ed=MEW&num=140",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%28140%2F165%29&ed=MEW&num=140",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-141": {
               "card_name": "Kabutops",
               "edition": "151",
               "collector_number": "141/165",
-              "liga_num": 141,
+              "liga_num": "141",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Kabutops%20(141%2F165)&ed=MEW&num=141",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabutops+%28141%2F165%29&ed=MEW&num=141",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-142": {
               "card_name": "Aerodactyl",
               "edition": "151",
               "collector_number": "142/165",
-              "liga_num": 142,
+              "liga_num": "142",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Aerodactyl%20(142%2F165)&ed=MEW&num=142",
-              "source_note": "Link direto da carta informado manualmente e usado como padrão validado."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl+%28142%2F165%29&ed=MEW&num=142",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-152": {
               "card_name": "Antique Dome Fossil",
               "edition": "151",
               "collector_number": "152/165",
-              "liga_num": 152,
+              "liga_num": "152",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Antique%20Dome%20Fossil%20(152%2F165)&ed=MEW&num=152",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Antique+Dome+Fossil+%28152%2F165%29&ed=MEW&num=152",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-153": {
               "card_name": "Antique Helix Fossil",
               "edition": "151",
               "collector_number": "153/165",
-              "liga_num": 153,
+              "liga_num": "153",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Antique%20Helix%20Fossil%20(153%2F165)&ed=MEW&num=153",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Antique+Helix+Fossil+%28153%2F165%29&ed=MEW&num=153",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "sv03.5-154": {
               "card_name": "Antique Old Amber",
               "edition": "151",
               "collector_number": "154/165",
-              "liga_num": 154,
+              "liga_num": "154",
               "validation_status": "validated",
-              "expected_url": "https://www.ligapokemon.com.br/?view=cards/card&card=Antique%20Old%20Amber%20(154%2F165)&ed=MEW&num=154",
-              "source_note": "Edição 151 validada na LigaPokemon; total oficial 165 confirmado pelo catálogo TCGdex."
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Antique+Old+Amber+%28154%2F165%29&ed=MEW&num=154",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
           },
           "neo4-37": {
               "card_name": "Dark Omanyte",
@@ -898,9 +907,11 @@
               "card_name": "Omanyte",
               "edition": "Legendary Collection",
               "collector_number": "57/110",
-              "liga_num": 57,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (lc). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "57",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%2857%2F110%29&ed=LC&num=57",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
           },
           "dp5-69": {
               "card_name": "Omanyte",
@@ -951,12 +962,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm9). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-74": {
-              "card_name": "Omanyte δ",
+              "card_name": "Omanyte",
               "edition": "Holon Phantoms",
               "collector_number": "74/110",
-              "liga_num": 74,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "74",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%2874%2F110%29&ed=EHP&num=74",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "neo4-19": {
               "card_name": "Dark Omastar",
@@ -1002,9 +1015,11 @@
               "card_name": "Omastar",
               "edition": "Legendary Collection",
               "collector_number": "58/110",
-              "liga_num": 58,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (lc). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "58",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%2858%2F110%29&ed=LC&num=58",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
           },
           "dp5-26": {
               "card_name": "Omastar",
@@ -1079,12 +1094,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (swsh12). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-13": {
-              "card_name": "Omastar δ",
+              "card_name": "Omastar",
               "edition": "Holon Phantoms",
               "collector_number": "13/110",
-              "liga_num": 13,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "13",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%2813%2F110%29&ed=EHP&num=13",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "xy10-96": {
               "card_name": "Dome Fossil Kabuto",
@@ -1130,9 +1147,11 @@
               "card_name": "Kabuto",
               "edition": "Legendary Collection",
               "collector_number": "48/110",
-              "liga_num": 48,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (lc). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "48",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%2848%2F110%29&ed=LC&num=48",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
           },
           "dp5-67": {
               "card_name": "Kabuto",
@@ -1183,12 +1202,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm9). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-67": {
-              "card_name": "Kabuto δ",
+              "card_name": "Kabuto",
               "edition": "Holon Phantoms",
               "collector_number": "67/110",
-              "liga_num": 67,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "67",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%2867%2F110%29&ed=EHP&num=67",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "pl4-4": {
               "card_name": "Kabutops",
@@ -1234,9 +1255,11 @@
               "card_name": "Kabutops",
               "edition": "Legendary Collection",
               "collector_number": "27/110",
-              "liga_num": 27,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (lc). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "27",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabutops+%2827%2F110%29&ed=LC&num=27",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
           },
           "dp5-6": {
               "card_name": "Kabutops",
@@ -1303,12 +1326,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex2). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-9": {
-              "card_name": "Kabutops δ",
+              "card_name": "Kabutops",
               "edition": "Holon Phantoms",
               "collector_number": "9/110",
-              "liga_num": 9,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "9",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabutops+%289%2F110%29&ed=EHP&num=9",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "neo4-108": {
               "card_name": "Shining Kabutops",
@@ -1415,28 +1440,34 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (pl2). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "sm11-106": {
-              "card_name": "Aerodactyl GX",
+              "card_name": "Aerodactyl-GX",
               "edition": "Unified Minds",
               "collector_number": "106/236",
-              "liga_num": 106,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "106",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl-GX+%28106%2F236%29&ed=UNM&num=106",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "sm11-224": {
-              "card_name": "Aerodactyl GX",
+              "card_name": "Aerodactyl-GX",
               "edition": "Unified Minds",
               "collector_number": "224/236",
-              "liga_num": 224,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "224",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl-GX+%28224%2F236%29&ed=UNM&num=224",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "sm11-244": {
-              "card_name": "Aerodactyl GX",
+              "card_name": "Aerodactyl-GX",
               "edition": "Unified Minds",
               "collector_number": "244/236",
-              "liga_num": 244,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "244",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl-GX+%28244%2F236%29&ed=UNM&num=244",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "swsh11-092": {
               "card_name": "Aerodactyl V",
@@ -1479,12 +1510,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (swsh11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-35": {
-              "card_name": "Aerodactyl δ",
+              "card_name": "Aerodactyl",
               "edition": "Holon Phantoms",
               "collector_number": "35/110",
-              "liga_num": 35,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "35",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl+%2835%2F110%29&ed=EHP&num=35",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "bw5-97": {
               "card_name": "Old Amber Aerodactyl",
@@ -1506,9 +1539,11 @@
               "card_name": "Lileep",
               "edition": "Cosmic Eclipse",
               "collector_number": "10/236",
-              "liga_num": 10,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm12). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "10",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Lileep+%2810%2F236%29&ed=CEC&num=10",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
           },
           "ex12-56": {
               "card_name": "Lileep",
@@ -1575,12 +1610,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sv07). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-68": {
-              "card_name": "Lileep δ",
+              "card_name": "Lileep",
               "edition": "Holon Phantoms",
               "collector_number": "68/110",
-              "liga_num": 68,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "68",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Lileep+%2868%2F110%29&ed=EHP&num=68",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "bw10-87": {
               "card_name": "Root Fossil Lileep",
@@ -1594,9 +1631,11 @@
               "card_name": "Cradily",
               "edition": "Cosmic Eclipse",
               "collector_number": "11/236",
-              "liga_num": 11,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm12). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "11",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Cradily+%2811%2F236%29&ed=CEC&num=11",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
           },
           "ex12-3": {
               "card_name": "Cradily",
@@ -1655,20 +1694,24 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex4). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-2": {
-              "card_name": "Cradily δ",
+              "card_name": "Cradily",
               "edition": "Holon Phantoms",
               "collector_number": "2/110",
-              "liga_num": 2,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "2",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Cradily+%282%2F110%29&ed=EHP&num=2",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "sm12-111": {
               "card_name": "Anorith",
               "edition": "Cosmic Eclipse",
               "collector_number": "111/236",
-              "liga_num": 111,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm12). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "111",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Anorith+%28111%2F236%29&ed=CEC&num=111",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
           },
           "ex12-29": {
               "card_name": "Anorith",
@@ -1719,12 +1762,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (xy11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-57": {
-              "card_name": "Anorith δ",
+              "card_name": "Anorith",
               "edition": "Holon Phantoms",
               "collector_number": "57/110",
-              "liga_num": 57,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "57",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Anorith+%2857%2F110%29&ed=EHP&num=57",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "xy11-100": {
               "card_name": "Claw Fossil Anorith",
@@ -1738,9 +1783,11 @@
               "card_name": "Armaldo",
               "edition": "Cosmic Eclipse",
               "collector_number": "112/236",
-              "liga_num": 112,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm12). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "112",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Armaldo+%28112%2F236%29&ed=CEC&num=112",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
           },
           "dp6-18": {
               "card_name": "Armaldo",
@@ -1799,12 +1846,14 @@
               "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (pop1). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
           },
           "ex13-1": {
-              "card_name": "Armaldo δ",
+              "card_name": "Armaldo",
               "edition": "Holon Phantoms",
               "collector_number": "1/110",
-              "liga_num": 1,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "1",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Armaldo+%281%2F110%29&ed=EHP&num=1",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "swsh10-076": {
               "card_name": "Cranidos",
@@ -2090,9 +2139,11 @@
               "card_name": "Tirtouga",
               "edition": "Unified Minds",
               "collector_number": "44/236",
-              "liga_num": 44,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "44",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Tirtouga+%2844%2F236%29&ed=UNM&num=44",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "sv10.5b-023": {
               "card_name": "Carracosta",
@@ -2138,9 +2189,11 @@
               "card_name": "Carracosta",
               "edition": "Unified Minds",
               "collector_number": "45/236",
-              "liga_num": 45,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "45",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Carracosta+%2845%2F236%29&ed=UNM&num=45",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "bw3-66": {
               "card_name": "Archen",
@@ -2170,9 +2223,11 @@
               "card_name": "Archen",
               "edition": "Unified Minds",
               "collector_number": "120/236",
-              "liga_num": 120,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "120",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Archen+%28120%2F236%29&ed=UNM&num=120",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "sv10.5w-050": {
               "card_name": "Archen",
@@ -2226,9 +2281,11 @@
               "card_name": "Archeops",
               "edition": "Unified Minds",
               "collector_number": "121/236",
-              "liga_num": 121,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "121",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Archeops+%28121%2F236%29&ed=UNM&num=121",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
           },
           "sv10.5w-051": {
               "card_name": "Archeops",
@@ -2554,9 +2611,11 @@
               "card_name": "Claw Fossil",
               "edition": "Holon Phantoms",
               "collector_number": "91/110",
-              "liga_num": 91,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "91",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Claw+Fossil+%2891%2F110%29&ed=EHP&num=91",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "ex12-78": {
               "card_name": "Claw Fossil",
@@ -2762,9 +2821,11 @@
               "card_name": "Holon Fossil",
               "edition": "Holon Phantoms",
               "collector_number": "86/110",
-              "liga_num": 86,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "86",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Holon+Fossil+%2886%2F110%29&ed=EHP&num=86",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "ex11-96": {
               "card_name": "Holon Ruins",
@@ -2794,9 +2855,11 @@
               "card_name": "Mysterious Fossil",
               "edition": "Holon Phantoms",
               "collector_number": "92/110",
-              "liga_num": 92,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "92",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Mysterious+Fossil+%2892%2F110%29&ed=EHP&num=92",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "ex12-79": {
               "card_name": "Mysterious Fossil",
@@ -2810,9 +2873,11 @@
               "card_name": "Mysterious Fossil",
               "edition": "Legendary Collection",
               "collector_number": "109/110",
-              "liga_num": 109,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (lc). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "109",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Mysterious+Fossil+%28109%2F110%29&ed=LC&num=109",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
           },
           "ex16-85": {
               "card_name": "Mysterious Fossil",
@@ -2898,9 +2963,11 @@
               "card_name": "Root Fossil",
               "edition": "Holon Phantoms",
               "collector_number": "93/110",
-              "liga_num": 93,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (ex13). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "93",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Root+Fossil+%2893%2F110%29&ed=EHP&num=93",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
           },
           "ex12-80": {
               "card_name": "Root Fossil",
@@ -2986,9 +3053,11 @@
               "card_name": "Unidentified Fossil",
               "edition": "Cosmic Eclipse",
               "collector_number": "207/236",
-              "liga_num": 207,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm12). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "207",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Unidentified+Fossil+%28207%2F236%29&ed=CEC&num=207",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
           },
           "sm6-116": {
               "card_name": "Unidentified Fossil",
@@ -3026,9 +3095,81 @@
               "card_name": "Unidentified Fossil",
               "edition": "Unified Minds",
               "collector_number": "210/236",
-              "liga_num": 210,
-              "validation_status": "generated",
-              "source_note": "URL individual gerada a partir da edição LigaPokemon validada e do número/total oficial do TCGdex (sm11). A página/preço ainda precisa ser conferida antes de classificar como preço LigaPokemon."
+              "liga_num": "210",
+              "validation_status": "validated",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ.",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Unidentified+Fossil+%28210%2F236%29&ed=UNM&num=210",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "swsh4.5sv-SV045": {
+              "card_name": "Dracozolt",
+              "edition": "Shining Fates Shiny Vault",
+              "collector_number": "SV045/SV122",
+              "liga_num": "SV045",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Dracozolt+%28SV045%2FSV122%29&ed=SFS&num=SV045",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
+          },
+          "swsh4.5sv-SV046": {
+              "card_name": "Arctozolt",
+              "edition": "Shining Fates Shiny Vault",
+              "collector_number": "SV046/SV122",
+              "liga_num": "SV046",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Arctozolt+%28SV046%2FSV122%29&ed=SFS&num=SV046",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
+          },
+          "swsh4.5sv-SV036": {
+              "card_name": "Dracovish",
+              "edition": "Shining Fates Shiny Vault",
+              "collector_number": "SV036/SV122",
+              "liga_num": "SV036",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Dracovish+%28SV036%2FSV122%29&ed=SFS&num=SV036",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
+          },
+          "swsh4.5sv-SV037": {
+              "card_name": "Arctovish",
+              "edition": "Shining Fates Shiny Vault",
+              "collector_number": "SV037/SV122",
+              "liga_num": "SV037",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Arctovish+%28SV037%2FSV122%29&ed=SFS&num=SV037",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
+          },
+          "mep-085": {
+              "card_name": "Bastiodon",
+              "edition": "MEP Black Star Promos",
+              "collector_number": "085/∞",
+              "liga_num": "085",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Bastiodon+%28085%2F%E2%88%9E%29&ed=MEP&num=085",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
+          },
+          "mep-070": {
+              "card_name": "Tyrunt",
+              "edition": "MEP Black Star Promos",
+              "collector_number": "070/∞",
+              "liga_num": "070",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Tyrunt+%28070%2F%E2%88%9E%29&ed=MEP&num=070",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
+          },
+          "mep-066": {
+              "card_name": "Tyrantrum",
+              "edition": "MEP Black Star Promos",
+              "collector_number": "066/∞",
+              "liga_num": "066",
+              "validation_status": "validated",
+              "expected_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Tyrantrum+%28066%2F%E2%88%9E%29&ed=MEP&num=066",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500",
+              "source_note": "Correspondência confirmada por edição Liga, nome e número de colecionador no catálogo CyndaQ."
           }
       },
       "price_status": "pending_validation",
@@ -4572,83 +4713,83 @@
           },
           "ex13-13": {
               "source": "cyndaq_ligapokemon_snapshot",
-              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/72/cards?limit=2500",
-              "cyndaq_card_id": 10339,
-              "cyndaq_edition_id": 72,
-              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Bellossom+%28013%2F052%29&ed=HP&num=013",
-              "min_price_cents": 4000,
-              "min_price": 40,
-              "avg_price_cents": 4000,
-              "avg_price": 40,
-              "max_price_cents": 4000,
-              "max_price": 40,
-              "observed_at": "2026-09-09T15:49:57.780000Z",
-              "match_key": "HP #013",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10232,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%2813%2F110%29&ed=EHP&num=13",
+              "min_price_cents": 9990,
+              "min_price": 99.9,
+              "avg_price_cents": 9990,
+              "avg_price": 99.9,
+              "max_price_cents": 9990,
+              "max_price": 99.9,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #13",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "ex13-9": {
               "source": "cyndaq_ligapokemon_snapshot",
-              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/72/cards?limit=2500",
-              "cyndaq_card_id": 10335,
-              "cyndaq_edition_id": 72,
-              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl+%28009%2F052%29&ed=HP&num=009",
-              "min_price_cents": 8900,
-              "min_price": 89,
-              "avg_price_cents": 8900,
-              "avg_price": 89,
-              "max_price_cents": 8900,
-              "max_price": 89,
-              "observed_at": "2026-09-09T15:49:57.780000Z",
-              "match_key": "HP #009",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10316,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabutops+%289%2F110%29&ed=EHP&num=9",
+              "min_price_cents": 22999,
+              "min_price": 229.99,
+              "avg_price_cents": 22999,
+              "avg_price": 229.99,
+              "max_price_cents": 22999,
+              "max_price": 229.99,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #9",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "ex13-35": {
               "source": "cyndaq_ligapokemon_snapshot",
-              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/72/cards?limit=2500",
-              "cyndaq_card_id": 10361,
-              "cyndaq_edition_id": 72,
-              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Deoxys+%28035%2F052%29&ed=HP&num=035",
-              "min_price_cents": 0,
-              "min_price": 0,
-              "avg_price_cents": 0,
-              "avg_price": 0,
-              "max_price_cents": 0,
-              "max_price": 0,
-              "observed_at": "2026-09-09T15:49:57.780000Z",
-              "match_key": "HP #035",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10256,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl+%2835%2F110%29&ed=EHP&num=35",
+              "min_price_cents": 6999,
+              "min_price": 69.99,
+              "avg_price_cents": 12660,
+              "avg_price": 126.6,
+              "max_price_cents": 20990,
+              "max_price": 209.9,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #35",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "ex13-2": {
               "source": "cyndaq_ligapokemon_snapshot",
-              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/72/cards?limit=2500",
-              "cyndaq_card_id": 10328,
-              "cyndaq_edition_id": 72,
-              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Vibrava+%28002%2F052%29&ed=HP&num=002",
-              "min_price_cents": 0,
-              "min_price": 0,
-              "avg_price_cents": 0,
-              "avg_price": 0,
-              "max_price_cents": 0,
-              "max_price": 0,
-              "observed_at": "2026-09-09T15:49:57.780000Z",
-              "match_key": "HP #002",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10239,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Cradily+%282%2F110%29&ed=EHP&num=2",
+              "min_price_cents": 6990,
+              "min_price": 69.9,
+              "avg_price_cents": 7505,
+              "avg_price": 75.05,
+              "max_price_cents": 8000,
+              "max_price": 80,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #2",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "ex13-1": {
               "source": "cyndaq_ligapokemon_snapshot",
-              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/72/cards?limit=2500",
-              "cyndaq_card_id": 10327,
-              "cyndaq_edition_id": 72,
-              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Trapinch+%28001%2F052%29&ed=HP&num=001",
-              "min_price_cents": 0,
-              "min_price": 0,
-              "avg_price_cents": 0,
-              "avg_price": 0,
-              "max_price_cents": 0,
-              "max_price": 0,
-              "observed_at": "2026-09-09T15:49:57.780000Z",
-              "match_key": "HP #001",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10216,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Armaldo+%281%2F110%29&ed=EHP&num=1",
+              "min_price_cents": 10000,
+              "min_price": 100,
+              "avg_price_cents": 10000,
+              "avg_price": 100,
+              "max_price_cents": 10000,
+              "max_price": 100,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #1",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "swsh12-035": {
               "source": "cyndaq_ligapokemon_snapshot",
@@ -6088,7 +6229,7 @@
               "max_price": 30,
               "observed_at": "2026-08-30T03:57:16.934000Z",
               "match_key": "MEP #085",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "mep-070": {
               "source": "cyndaq_ligapokemon_snapshot",
@@ -6104,7 +6245,7 @@
               "max_price": 63.05,
               "observed_at": "2026-08-30T03:56:36.923000Z",
               "match_key": "MEP #070",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "mep-066": {
               "source": "cyndaq_ligapokemon_snapshot",
@@ -6120,7 +6261,7 @@
               "max_price": 38,
               "observed_at": "2026-08-30T03:56:26.917000Z",
               "match_key": "MEP #066",
-              "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           },
           "ru1-14": {
               "source": "cyndaq_ligapokemon_snapshot",
@@ -7065,9 +7206,883 @@
               "observed_at": "2026-09-09T15:50:34.409000Z",
               "match_key": "AQ #138",
               "source_note": "Preço mínimo observado pelo CyndaQ a partir de dados da LigaPokemon. Use como referência; confira a página se for comprar/vender."
+          },
+          "sv03.5-180": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500",
+              "cyndaq_card_id": 4360,
+              "cyndaq_edition_id": 28,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%28180%2F165%29&ed=MEW&num=180",
+              "min_price_cents": 7500,
+              "min_price": 75,
+              "avg_price_cents": 18250,
+              "avg_price": 182.5,
+              "max_price_cents": 25000,
+              "max_price": 250,
+              "observed_at": "2026-09-07T18:28:05.109000Z",
+              "match_key": "MEW #180",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sv03.5-141": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500",
+              "cyndaq_card_id": 4321,
+              "cyndaq_edition_id": 28,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabutops+%28141%2F165%29&ed=MEW&num=141",
+              "min_price_cents": 2125,
+              "min_price": 21.25,
+              "avg_price_cents": 2125,
+              "avg_price": 21.25,
+              "max_price_cents": 2125,
+              "max_price": 21.25,
+              "observed_at": "2026-08-19T13:53:45.492000Z",
+              "match_key": "MEW #141",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sv03.5-142": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500",
+              "cyndaq_card_id": 4322,
+              "cyndaq_edition_id": 28,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl+%28142%2F165%29&ed=MEW&num=142",
+              "min_price_cents": 3000,
+              "min_price": 30,
+              "avg_price_cents": 3000,
+              "avg_price": 30,
+              "max_price_cents": 3000,
+              "max_price": 30,
+              "observed_at": "2026-08-19T13:53:46.494000Z",
+              "match_key": "MEW #142",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sv03.5-152": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500",
+              "cyndaq_card_id": 4332,
+              "cyndaq_edition_id": 28,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Antique+Dome+Fossil+%28152%2F165%29&ed=MEW&num=152",
+              "min_price_cents": 45,
+              "min_price": 0.45,
+              "avg_price_cents": 70,
+              "avg_price": 0.7,
+              "max_price_cents": 116,
+              "max_price": 1.16,
+              "observed_at": "2026-08-19T13:53:56.500000Z",
+              "match_key": "MEW #152",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sv03.5-153": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500",
+              "cyndaq_card_id": 4333,
+              "cyndaq_edition_id": 28,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Antique+Helix+Fossil+%28153%2F165%29&ed=MEW&num=153",
+              "min_price_cents": 23,
+              "min_price": 0.23,
+              "avg_price_cents": 59,
+              "avg_price": 0.59,
+              "max_price_cents": 95,
+              "max_price": 0.95,
+              "observed_at": "2026-08-19T13:53:57.497000Z",
+              "match_key": "MEW #153",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sv03.5-154": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500",
+              "cyndaq_card_id": 4334,
+              "cyndaq_edition_id": 28,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Antique+Old+Amber+%28154%2F165%29&ed=MEW&num=154",
+              "min_price_cents": 47,
+              "min_price": 0.47,
+              "avg_price_cents": 68,
+              "avg_price": 0.68,
+              "max_price_cents": 95,
+              "max_price": 0.95,
+              "observed_at": "2026-08-19T13:53:58.503000Z",
+              "match_key": "MEW #154",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "lc-57": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500",
+              "cyndaq_card_id": 37511,
+              "cyndaq_edition_id": 465,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%2857%2F110%29&ed=LC&num=57",
+              "min_price_cents": 43990,
+              "min_price": 439.9,
+              "avg_price_cents": 43990,
+              "avg_price": 439.9,
+              "max_price_cents": 43990,
+              "max_price": 439.9,
+              "observed_at": "2026-09-16T20:05:54.568000Z",
+              "match_key": "LC #57",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "lc-58": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500",
+              "cyndaq_card_id": 37512,
+              "cyndaq_edition_id": 465,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omastar+%2858%2F110%29&ed=LC&num=58",
+              "min_price_cents": 1599,
+              "min_price": 15.99,
+              "avg_price_cents": 100800,
+              "avg_price": 1008,
+              "max_price_cents": 200000,
+              "max_price": 2000,
+              "observed_at": "2026-09-16T20:05:54.568000Z",
+              "match_key": "LC #58",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "lc-48": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500",
+              "cyndaq_card_id": 37501,
+              "cyndaq_edition_id": 465,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%2848%2F110%29&ed=LC&num=48",
+              "min_price_cents": 1990,
+              "min_price": 19.9,
+              "avg_price_cents": 53493,
+              "avg_price": 534.93,
+              "max_price_cents": 119999,
+              "max_price": 1199.99,
+              "observed_at": "2026-09-16T20:05:54.568000Z",
+              "match_key": "LC #48",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "lc-27": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500",
+              "cyndaq_card_id": 37479,
+              "cyndaq_edition_id": 465,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabutops+%2827%2F110%29&ed=LC&num=27",
+              "min_price_cents": 3990,
+              "min_price": 39.9,
+              "avg_price_cents": 70330,
+              "avg_price": 703.3,
+              "max_price_cents": 197000,
+              "max_price": 1970,
+              "observed_at": "2026-09-16T20:05:54.568000Z",
+              "match_key": "LC #27",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "lc-109": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500",
+              "cyndaq_card_id": 37460,
+              "cyndaq_edition_id": 465,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Mysterious+Fossil+%28109%2F110%29&ed=LC&num=109",
+              "min_price_cents": 89,
+              "min_price": 0.89,
+              "avg_price_cents": 470,
+              "avg_price": 4.7,
+              "max_price_cents": 699,
+              "max_price": 6.99,
+              "observed_at": "2026-09-16T20:05:54.568000Z",
+              "match_key": "LC #109",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-74": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10299,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Omanyte+%2874%2F110%29&ed=EHP&num=74",
+              "min_price_cents": 990,
+              "min_price": 9.9,
+              "avg_price_cents": 990,
+              "avg_price": 9.9,
+              "max_price_cents": 990,
+              "max_price": 9.9,
+              "observed_at": "2026-09-03T15:59:12.722000Z",
+              "match_key": "EHP #74",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-67": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10291,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Kabuto+%2867%2F110%29&ed=EHP&num=67",
+              "min_price_cents": 37000,
+              "min_price": 370,
+              "avg_price_cents": 39995,
+              "avg_price": 399.95,
+              "max_price_cents": 42990,
+              "max_price": 429.9,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #67",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-68": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10292,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Lileep+%2868%2F110%29&ed=EHP&num=68",
+              "min_price_cents": 179,
+              "min_price": 1.79,
+              "avg_price_cents": 573,
+              "avg_price": 5.73,
+              "max_price_cents": 1239,
+              "max_price": 12.39,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #68",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-57": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10280,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Anorith+%2857%2F110%29&ed=EHP&num=57",
+              "min_price_cents": 189,
+              "min_price": 1.89,
+              "avg_price_cents": 334,
+              "avg_price": 3.34,
+              "max_price_cents": 499,
+              "max_price": 4.99,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #57",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-91": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10318,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Claw+Fossil+%2891%2F110%29&ed=EHP&num=91",
+              "min_price_cents": 50,
+              "min_price": 0.5,
+              "avg_price_cents": 131,
+              "avg_price": 1.31,
+              "max_price_cents": 200,
+              "max_price": 2,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #91",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-86": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10312,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Holon+Fossil+%2886%2F110%29&ed=EHP&num=86",
+              "min_price_cents": 100,
+              "min_price": 1,
+              "avg_price_cents": 138,
+              "avg_price": 1.38,
+              "max_price_cents": 199,
+              "max_price": 1.99,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #86",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-92": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10319,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Mysterious+Fossil+%2892%2F110%29&ed=EHP&num=92",
+              "min_price_cents": 30,
+              "min_price": 0.3,
+              "avg_price_cents": 916,
+              "avg_price": 9.16,
+              "max_price_cents": 2999,
+              "max_price": 29.99,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #92",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "ex13-93": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500",
+              "cyndaq_card_id": 10320,
+              "cyndaq_edition_id": 71,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Root+Fossil+%2893%2F110%29&ed=EHP&num=93",
+              "min_price_cents": 50,
+              "min_price": 0.5,
+              "avg_price_cents": 147,
+              "avg_price": 1.47,
+              "max_price_cents": 200,
+              "max_price": 2,
+              "observed_at": "2026-09-09T15:49:59.558000Z",
+              "match_key": "EHP #93",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-106": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21102,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl-GX+%28106%2F236%29&ed=UNM&num=106",
+              "min_price_cents": 790,
+              "min_price": 7.9,
+              "avg_price_cents": 1792,
+              "avg_price": 17.92,
+              "max_price_cents": 2450,
+              "max_price": 24.5,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #106",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-224": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21234,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl-GX+%28224%2F236%29&ed=UNM&num=224",
+              "min_price_cents": 2200,
+              "min_price": 22,
+              "avg_price_cents": 3871,
+              "avg_price": 38.71,
+              "max_price_cents": 5999,
+              "max_price": 59.99,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #224",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-244": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21256,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Aerodactyl-GX+%28244%2F236%29&ed=UNM&num=244",
+              "min_price_cents": 8990,
+              "min_price": 89.9,
+              "avg_price_cents": 12235,
+              "avg_price": 122.35,
+              "max_price_cents": 14990,
+              "max_price": 149.9,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #244",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-44": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21292,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Tirtouga+%2844%2F236%29&ed=UNM&num=44",
+              "min_price_cents": 89,
+              "min_price": 0.89,
+              "avg_price_cents": 230,
+              "avg_price": 2.3,
+              "max_price_cents": 399,
+              "max_price": 3.99,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #44",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-45": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21293,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Carracosta+%2845%2F236%29&ed=UNM&num=45",
+              "min_price_cents": 39,
+              "min_price": 0.39,
+              "avg_price_cents": 673,
+              "avg_price": 6.73,
+              "max_price_cents": 1990,
+              "max_price": 19.9,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #45",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-120": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21118,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Archen+%28120%2F236%29&ed=UNM&num=120",
+              "min_price_cents": 30,
+              "min_price": 0.3,
+              "avg_price_cents": 173,
+              "avg_price": 1.73,
+              "max_price_cents": 475,
+              "max_price": 4.75,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #120",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-121": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21119,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Archeops+%28121%2F236%29&ed=UNM&num=121",
+              "min_price_cents": 198,
+              "min_price": 1.98,
+              "avg_price_cents": 800,
+              "avg_price": 8,
+              "max_price_cents": 1499,
+              "max_price": 14.99,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #121",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm11-210": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500",
+              "cyndaq_card_id": 21219,
+              "cyndaq_edition_id": 197,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Unidentified+Fossil+%28210%2F236%29&ed=UNM&num=210",
+              "min_price_cents": 23,
+              "min_price": 0.23,
+              "avg_price_cents": 83,
+              "avg_price": 0.83,
+              "max_price_cents": 400,
+              "max_price": 4,
+              "observed_at": "2026-09-09T19:25:13.633000Z",
+              "match_key": "UNM #210",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm12-10": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500",
+              "cyndaq_card_id": 22631,
+              "cyndaq_edition_id": 158,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Lileep+%2810%2F236%29&ed=CEC&num=10",
+              "min_price_cents": 40,
+              "min_price": 0.4,
+              "avg_price_cents": 129,
+              "avg_price": 1.29,
+              "max_price_cents": 399,
+              "max_price": 3.99,
+              "observed_at": "2026-09-09T19:25:55.409000Z",
+              "match_key": "CEC #10",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm12-11": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500",
+              "cyndaq_card_id": 22642,
+              "cyndaq_edition_id": 158,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Cradily+%2811%2F236%29&ed=CEC&num=11",
+              "min_price_cents": 99,
+              "min_price": 0.99,
+              "avg_price_cents": 353,
+              "avg_price": 3.53,
+              "max_price_cents": 599,
+              "max_price": 5.99,
+              "observed_at": "2026-09-09T19:25:55.409000Z",
+              "match_key": "CEC #11",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm12-111": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500",
+              "cyndaq_card_id": 22644,
+              "cyndaq_edition_id": 158,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Anorith+%28111%2F236%29&ed=CEC&num=111",
+              "min_price_cents": 35,
+              "min_price": 0.35,
+              "avg_price_cents": 85,
+              "avg_price": 0.85,
+              "max_price_cents": 125,
+              "max_price": 1.25,
+              "observed_at": "2026-09-09T19:25:55.409000Z",
+              "match_key": "CEC #111",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm12-112": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500",
+              "cyndaq_card_id": 22645,
+              "cyndaq_edition_id": 158,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Armaldo+%28112%2F236%29&ed=CEC&num=112",
+              "min_price_cents": 999,
+              "min_price": 9.99,
+              "avg_price_cents": 999,
+              "avg_price": 9.99,
+              "max_price_cents": 999,
+              "max_price": 9.99,
+              "observed_at": "2026-09-09T19:25:55.409000Z",
+              "match_key": "CEC #112",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "sm12-207": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500",
+              "cyndaq_card_id": 22749,
+              "cyndaq_edition_id": 158,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Unidentified+Fossil+%28207%2F236%29&ed=CEC&num=207",
+              "min_price_cents": 35,
+              "min_price": 0.35,
+              "avg_price_cents": 88,
+              "avg_price": 0.88,
+              "max_price_cents": 250,
+              "max_price": 2.5,
+              "observed_at": "2026-09-09T19:25:55.409000Z",
+              "match_key": "CEC #207",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "swsh4.5sv-SV045": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "cyndaq_card_id": 20672,
+              "cyndaq_edition_id": 204,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Dracozolt+%28SV045%2FSV122%29&ed=SFS&num=SV045",
+              "min_price_cents": 2500,
+              "min_price": 25,
+              "avg_price_cents": 3360,
+              "avg_price": 33.6,
+              "max_price_cents": 4900,
+              "max_price": 49,
+              "observed_at": "2026-09-09T19:24:10.316000Z",
+              "match_key": "SFS #SV045",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "swsh4.5sv-SV046": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "cyndaq_card_id": 20673,
+              "cyndaq_edition_id": 204,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Arctozolt+%28SV046%2FSV122%29&ed=SFS&num=SV046",
+              "min_price_cents": 8499,
+              "min_price": 84.99,
+              "avg_price_cents": 8839,
+              "avg_price": 88.39,
+              "max_price_cents": 9900,
+              "max_price": 99,
+              "observed_at": "2026-09-09T19:24:10.316000Z",
+              "match_key": "SFS #SV046",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "swsh4.5sv-SV036": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "cyndaq_card_id": 20663,
+              "cyndaq_edition_id": 204,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Dracovish+%28SV036%2FSV122%29&ed=SFS&num=SV036",
+              "min_price_cents": 3999,
+              "min_price": 39.99,
+              "avg_price_cents": 5995,
+              "avg_price": 59.95,
+              "max_price_cents": 7990,
+              "max_price": 79.9,
+              "observed_at": "2026-09-09T19:24:10.316000Z",
+              "match_key": "SFS #SV036",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
+          },
+          "swsh4.5sv-SV037": {
+              "source": "cyndaq_ligapokemon_snapshot",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500",
+              "cyndaq_card_id": 20664,
+              "cyndaq_edition_id": 204,
+              "liga_url": "https://www.ligapokemon.com.br/?view=cards%2Fcard&card=Arctovish+%28SV037%2FSV122%29&ed=SFS&num=SV037",
+              "min_price_cents": 2495,
+              "min_price": 24.95,
+              "avg_price_cents": 3438,
+              "avg_price": 34.38,
+              "max_price_cents": 5000,
+              "max_price": 50,
+              "observed_at": "2026-09-09T19:24:10.316000Z",
+              "match_key": "SFS #SV037",
+              "source_note": "Preço anunciado observado pelo CyndaQ na LigaPokemon; condição, idioma e acabamento podem variar. Não é cotação em tempo real."
           }
       },
-      "priceReferencePolicy": "priceReferences usa snapshot publico do CyndaQ/LigaPokemon. min_price é o menor preço anunciado observado, não o valor pago pelo usuário e não substitui conferência manual da página."
+      "priceReferencePolicy": "priceReferences usa snapshot publico do CyndaQ/LigaPokemon. min_price é o menor preço anunciado observado, não o valor pago pelo usuário e não substitui conferência manual da página.",
+      "priceAvailability": {
+          "sv03.5-138": {
+              "status": "price_unavailable",
+              "checked_at": "2026-09-17T03:10:50.511Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-180": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.514Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-139": {
+              "status": "price_unavailable",
+              "checked_at": "2026-09-17T03:10:50.516Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-140": {
+              "status": "price_unavailable",
+              "checked_at": "2026-09-17T03:10:50.518Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-141": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.519Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-142": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.520Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-152": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.521Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-153": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.523Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "sv03.5-154": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.524Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/28/cards?limit=2500"
+          },
+          "lc-57": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.567Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
+          },
+          "lc-58": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.568Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
+          },
+          "lc-48": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.568Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
+          },
+          "lc-27": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.569Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
+          },
+          "lc-109": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.569Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/465/cards?limit=2500"
+          },
+          "ex13-74": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.615Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-13": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.616Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-67": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.616Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-9": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.617Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-35": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.617Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-68": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.618Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-2": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.619Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-57": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.619Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-1": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.620Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-91": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.620Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-86": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.621Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-92": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.622Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "ex13-93": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.622Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/71/cards?limit=2500"
+          },
+          "sm11-106": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.689Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-224": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.691Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-244": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.692Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-44": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.693Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-45": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.694Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-120": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.695Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-121": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.696Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm11-210": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.697Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/197/cards?limit=2500"
+          },
+          "sm12-10": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.762Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
+          },
+          "sm12-11": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.763Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
+          },
+          "sm12-111": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.764Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
+          },
+          "sm12-112": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.766Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
+          },
+          "sm12-207": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/158/cards?limit=2500"
+          },
+          "ex4-90": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "pop1-16": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "dpp-DP07": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "dpp-DP08": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "swsh3-65": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "swsh3-66": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "swsh3-53": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "swsh3-54": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "swsh3-167": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.767Z",
+              "source_api_url": null
+          },
+          "swsh4.5sv-SV045": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.809Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500"
+          },
+          "swsh4.5sv-SV046": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.810Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500"
+          },
+          "swsh4.5sv-SV036": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.811Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500"
+          },
+          "swsh4.5sv-SV037": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.811Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/204/cards?limit=2500"
+          },
+          "ex5-88": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.811Z",
+              "source_api_url": null
+          },
+          "swsh2-160": {
+              "status": "edition_unavailable",
+              "checked_at": "2026-09-17T03:10:50.811Z",
+              "source_api_url": null
+          },
+          "mep-085": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.862Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500"
+          },
+          "mep-070": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.862Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500"
+          },
+          "mep-066": {
+              "status": "available",
+              "checked_at": "2026-09-17T03:10:50.863Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500"
+          },
+          "mep-Museum": {
+              "status": "unmatched",
+              "checked_at": "2026-09-17T03:10:50.864Z",
+              "source_api_url": "https://cyndaq.fun/api/v1/catalog/editions/89/cards?limit=2500"
+          }
+      },
+      "pricesCheckedAt": "2026-09-17T03:10:50.867Z"
   };
 
   window.LIGA_URLS = { buildCardUrl, buildEditionUrl };

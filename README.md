@@ -67,7 +67,11 @@ Isso também funciona entre navegadores diferentes. Cada dispositivo mantém sua
 
 Cada ficha possui um link de consulta para a Liga Pokémon. A aplicação deixa a **referência em reais editável**, para você registrar a cotação que considerar correta no momento.
 
-Os preços não são preenchidos automaticamente porque a Liga Pokémon não disponibiliza uma API pública aberta. Assim, o fichário não apresenta uma cotação antiga como se fosse atual.
+Os preços publicados são referências do catálogo público CyndaQ, coletadas na Liga Pokémon. A ficha informa a data observada e abre o anúncio correspondente à mesma carta. Não são cotações em tempo real; condição, idioma e acabamento podem variar. O valor pago pelo usuário permanece separado.
+
+Na revisão de 17/09/2026, **288 das 303 cartas** possuem referência. Foram preenchidas 36 lacunas e corrigidas cinco associações de EX Holon Phantoms, incluindo três valores zero. As 15 restantes são identificadas como sem cotação, com o motivo na ficha: preço indisponível na fonte, edição ausente ou impressão ainda sem correspondência. Isso não significa que a carta não tenha anúncios na Liga.
+
+Para atualizar as lacunas a partir da fonte pública, execute `node scripts/refresh-liga-prices.mjs`; para validar os dados e a ordenação, execute `node scripts/test-liga-prices.mjs`. A importação cruza código e ID da edição, nome e número de colecionador. Não substitui uma impressão por outra apenas por compartilhar o mesmo número, nem usa a versão oversized para preencher uma promoção comum. Após atualizar preços, revise os resultados e atualize a versão dos arquivos em `dist/index.html` antes de publicar.
 
 As URLs da Liga Pokémon são geradas a partir de componentes validados quando eles existem: edição, `edid`, código `ed`, número de colecionador e número Liga. Dados ainda não confirmados ficam como **pendentes de validação**, sem preço inventado e sem transformar busca genérica em preço oficial.
 

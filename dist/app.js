@@ -47,6 +47,12 @@ const ligaPrintFor = card => ligaPrints[card.id] || null;
 const ligaEditionFor = (card, print = ligaPrintFor(card)) =>
   (print?.edition && ligaEditionByName.get(print.edition)) || ligaEditionByTcgSet.get(card.set) || null;
 const ligaLinkFor = card => {
+  const referenceUrl = ligaPriceReferences[card.id]?.liga_url;
+  if (referenceUrl) return {
+    url: referenceUrl,
+    text: 'Conferir preço desta carta na LigaPokemon ↗',
+    status: 'Referência da mesma edição e número de colecionador.'
+  };
   const print = ligaPrintFor(card);
   const edition = ligaEditionFor(card, print);
   const cardUrl = ligaUrlTools.buildCardUrl?.(print, edition);
@@ -86,6 +92,11 @@ const ligaPriceReferenceFor = card => card ? ligaPriceReferences[card.id] || nul
 const ligaPriceFor = card => card
   ? normalizeStoredPrice(ligaPriceReferenceFor(card)?.min_price) ?? normalizeStoredPrice(card.ligaPrice)
   : null;
+const ligaMissingReason = card => ({
+  price_unavailable: 'A carta foi localizada, mas a fonte não fornece cotação para ela nesta consulta.',
+  edition_unavailable: 'Esta edição ainda não está disponível na fonte de preços utilizada.',
+  unmatched: 'Ainda não foi encontrada uma cotação para esta impressão exata da carta.'
+}[ligaData.priceAvailability?.[card.id]?.status] || 'Ainda não há cotação confirmada para esta carta.');
 const formatObservedDate = value => value
   ? new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(value))
   : null;
@@ -181,12 +192,12 @@ function renderCatalog() {
   const visible = filteredCards();
   const owned = new Set(placedIds());
   const pricedCount = visible.filter(card => ligaPriceFor(card) != null).length;
-  el.sortStatus.hidden = ui.sort !== 'price';
-  if (ui.sort === 'price') {
+  el.sortStatus.hidden = false;
+  {
     el.sortStatus.classList.toggle('is-empty', pricedCount === 0);
     el.sortStatus.textContent = pricedCount
-      ? `${pricedCount} ${pricedCount === 1 ? 'carta possui' : 'cartas possuem'} valor mínimo Liga importado. As demais ficam no fim.`
-      : 'Nenhuma carta possui valor mínimo Liga importado no snapshot atual.';
+      ? `${pricedCount} de ${visible.length} cartas com referência Liga. ${visible.length - pricedCount} sem cotação.${ui.sort === 'price' && pricedCount < visible.length ? ' Sem cotação ficam no fim.' : ''}`
+      : 'Nenhuma das cartas exibidas possui cotação confirmada na fonte atual.';
   }
   el.cardList.replaceChildren();
   el.resultCount.textContent = visible.length;
@@ -211,7 +222,10 @@ function renderCatalog() {
     node.querySelector('h3').textContent = card.name;
     node.querySelector('p').textContent = `${card.set} · ${card.releaseDate?.slice(0, 4) || 'sem data'} · #${card.number}`;
     node.querySelector('.kind').textContent = card.kind === 'pokemon' ? card.family : 'Temática';
-    node.querySelector('.price').textContent = price != null ? `Mín. Liga: ${money.format(price)}` : 'Liga: consultar';
+    node.querySelector('.price').textContent = price != null ? `Mín. Liga: ${money.format(price)}` : 'Liga: sem cotação';
+    node.querySelector('.price').title = price != null
+      ? `Referência observada em ${formatObservedDate(ligaPriceReferenceFor(card)?.observed_at) || 'data não informada'}. Confira condição, idioma e acabamento na Liga.`
+      : ligaMissingReason(card);
     node.querySelector('.owned-badge').hidden = !owned.has(card.id);
     node.addEventListener('dragstart', event => event.dataTransfer.setData('text/plain', `card:${card.id}`));
     node.addEventListener('click', event => { if (!event.target.closest('.add-card')) openCardDialog(card.id); });
@@ -321,8 +335,8 @@ function openCardDialog(id, pageIndex = null, slotIndex = null) {
   el.ligaLink.href = ligaInfo.url;
   el.ligaLink.textContent = ligaInfo.text;
   el.ligaStatus.textContent = priceReference?.min_price != null
-    ? `${ligaInfo.status} Menor valor observado: ${money.format(priceReference.min_price)}${observedDate ? ` em ${observedDate}` : ''}.`
-    : ligaInfo.status;
+    ? `${ligaInfo.status} Menor valor observado pelo CyndaQ na Liga: ${money.format(priceReference.min_price)}${observedDate ? ` em ${observedDate}` : ''}. Condição, idioma e acabamento podem variar; consulte os anúncios atuais.`
+    : `${ligaMissingReason(card)} Use o link da Liga para conferir os anúncios. Ausência de cotação não significa carta sem valor.`;
   el.sourceLink.href = card.sourceUrl;
   el.acquisitionMethod.value = record.method || 'unknown';
   el.paidPrice.value = formatInput(record.paidPrice);
